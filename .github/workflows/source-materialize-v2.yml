@@ -1,0 +1,206 @@
+name: Source materialize skill packs v2
+
+on:
+  push:
+    branches:
+      - agent/add-skill-packs
+    paths:
+      - '.github/workflows/source-materialize-v2.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    if: ${{ !contains(github.event.head_commit.message, '[source-v2]') }}
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/add-skill-packs
+          fetch-depth: 0
+
+      - name: Detect completed import
+        id: state
+        shell: bash
+        run: |
+          count="$(find . -type f -name SKILL.md -not -path './.git/*' | wc -l)"
+          if [ "$count" -eq 74 ] && [ -f README.md ] && [ ! -d .upload ]; then
+            echo 'complete=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'complete=false' >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Fetch known sources
+        if: steps.state.outputs.complete != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/sources
+          git clone --depth 1 https://github.com/vercel-labs/agent-skills.git /tmp/sources/vercel || true
+          git clone --depth 1 https://github.com/openai/skills.git /tmp/sources/openai || true
+          git clone --depth 1 https://github.com/openai/codex.git /tmp/sources/codex || true
+          git clone --depth 1 https://github.com/anthropics/skills.git /tmp/sources/anthropic || true
+          git clone --depth 1 https://github.com/getsentry/sentry-mcp.git /tmp/sources/sentry || true
+
+      - name: Recreate missing skill packs
+        if: steps.state.outputs.complete != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          copy_from_known() {
+            local target="$1" skill="$2"
+            shift 2
+            local repo source
+            for repo in "$@"; do
+              [ -d "/tmp/sources/$repo" ] || continue
+              source="$(find "/tmp/sources/$repo" -type f -name SKILL.md -path "*/$skill/SKILL.md" -print -quit)"
+              if [ -n "$source" ]; then
+                mkdir -p "$target"
+                cp -a "$(dirname "$source")/." "$target/"
+                return 0
+              fi
+            done
+            return 1
+          }
+
+          copy_from_search() {
+            local target="$1" skill="$2" row full path cache
+            row="$(gh api -X GET search/code -f q="filename:SKILL.md path:$skill" --jq '.items[] | [.repository.full_name,.path] | @tsv' 2>/dev/null \
+              | awk -F '\t' -v suffix="/$skill/SKILL.md" '$2 == substr(suffix,2) || substr($2,length($2)-length(suffix)+1) == suffix {print; exit}')"
+            [ -n "$row" ] || return 1
+            full="${row%%$'\t'*}"
+            path="${row#*$'\t'}"
+            cache="/tmp/sources/search-${full//\//-}"
+            if [ ! -d "$cache" ]; then
+              git clone --depth 1 "https://github.com/$full.git" "$cache"
+            fi
+            mkdir -p "$target"
+            cp -a "$cache/$(dirname "$path")/." "$target/"
+          }
+
+          mapfile -t specs < <(sed -n -E 's/^[[:space:]]*((ai-agent|local-github)[^|]+\|[^[:space:]].*)$/\1/p' .github/workflows/source-materialize.yml)
+          test "${#specs[@]}" -eq 74
+
+          rm -rf \
+            local-github-agentic-loop-pack \
+            ai-agent-documents-creative-skills \
+            ai-agent-ui-product-skills \
+            ai-agent-large-project-engineering-skills \
+            ai-agent-production-saas-skills \
+            ai-agent-ai-app-skills \
+            ai-agent-web-engineering-skills \
+            ai-agent-core-skills
+
+          missing=()
+          for spec in "${specs[@]}"; do
+            target="${spec%%|*}"
+            sources="${spec#*|}"
+            skill="${target##*/}"
+            # shellcheck disable=SC2086
+            if copy_from_known "$target" "$skill" $sources; then
+              continue
+            fi
+            if copy_from_search "$target" "$skill"; then
+              sleep 2
+              continue
+            fi
+            missing+=("$target")
+          done
+
+          if [ "${#missing[@]}" -ne 0 ]; then
+            printf 'Missing skills after source search:\n' >&2
+            printf ' - %s\n' "${missing[@]}" >&2
+            exit 1
+          fi
+
+          find . -type f -iname '*.png' -not -path './.git/*' -delete
+
+      - name: Generate README
+        if: steps.state.outputs.complete != 'true'
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > README.md <<'README'
+          # ChatGPT Skills
+
+          A curated collection of reusable AI-agent skills organized into eight focused packs. Each skill is anchored by a `SKILL.md`; companion scripts, references, examples, templates, and supporting files remain beside it.
+
+          ## Included packs
+
+          | Pack | Skills | Focus |
+          |---|---:|---|
+          | `local-github-agentic-loop-pack` | 16 | GitHub workflows, iterative agent loops, testing, security, and repository automation |
+          | `ai-agent-documents-creative-skills` | 6 | Documents, PDFs, slides, spreadsheets, image generation, and video |
+          | `ai-agent-ui-product-skills` | 6 | Product UI, design systems, React quality, typography, and shadcn/ui |
+          | `ai-agent-large-project-engineering-skills` | 10 | Architecture, browser verification, monorepos, services, and durable workflows |
+          | `ai-agent-production-saas-skills` | 10 | Authentication, deployments, observability, payments, caching, security, storage, and functions |
+          | `ai-agent-ai-app-skills` | 10 | AI SDKs, gateways, chat, agents, rendering, flags, and workflows |
+          | `ai-agent-web-engineering-skills` | 8 | Next.js, caching, routing, CMS, SWR, Turbopack, and Vercel CLI |
+          | `ai-agent-core-skills` | 6 | Browser automation, documentation, investigation, verification, and skill creation |
+
+          **Total: 74 skills.**
+
+          ## Repository layout
+
+          ```text
+          <pack>/
+            <skill>/
+              SKILL.md
+              scripts/       # optional
+              references/    # optional
+              examples/      # optional
+              templates/     # optional
+          ```
+
+          ## Using a skill
+
+          Open the relevant `SKILL.md` and follow its trigger conditions, workflow, and validation guidance. Copy the complete skill directory when installing it elsewhere so companion resources remain available.
+
+          ## Skill catalog
+          README
+
+          for pack in \
+            local-github-agentic-loop-pack \
+            ai-agent-documents-creative-skills \
+            ai-agent-ui-product-skills \
+            ai-agent-large-project-engineering-skills \
+            ai-agent-production-saas-skills \
+            ai-agent-ai-app-skills \
+            ai-agent-web-engineering-skills \
+            ai-agent-core-skills; do
+            printf '\n### `%s`\n\n' "$pack" >> README.md
+            find "$pack" -mindepth 2 -maxdepth 2 -type f -name SKILL.md -printf '%h\n' \
+              | sed "s#^$pack/##" | sort | sed 's/^/- `/' | sed 's/$/`/' >> README.md
+          done
+
+          cat >> README.md <<'NOTES'
+
+          ## Notes
+
+          Decorative preview PNGs are intentionally omitted. Functional documentation, scripts, references, examples, templates, and other supporting files are retained.
+          NOTES
+
+      - name: Verify, clean staging, and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find . -type f -name SKILL.md -not -path './.git/*' | wc -l)" -eq 74
+          test -f README.md
+          rm -rf .upload
+          rm -f .gitkeep \
+            .github/workflows/materialize-skill-packs.yml \
+            .github/workflows/source-materialize.yml \
+            .github/workflows/source-materialize-v2.yml
+          rmdir .github/workflows .github 2>/dev/null || true
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m 'Add extracted skill packs and README [source-v2]'
+          git push origin HEAD:agent/add-skill-packs
