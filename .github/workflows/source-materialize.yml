@@ -1,0 +1,229 @@
+name: Source materialize skill packs
+
+on:
+  push:
+    branches:
+      - agent/add-skill-packs
+    paths:
+      - '.github/workflows/source-materialize.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    if: ${{ !contains(github.event.head_commit.message, '[source-materialized]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out import branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/add-skill-packs
+          fetch-depth: 0
+
+      - name: Fetch public skill sources
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/sources
+          git clone --depth 1 https://github.com/vercel-labs/agent-skills.git /tmp/sources/vercel
+          git clone --depth 1 https://github.com/openai/skills.git /tmp/sources/openai
+          git clone --depth 1 https://github.com/openai/codex.git /tmp/sources/codex
+          git clone --depth 1 https://github.com/anthropics/skills.git /tmp/sources/anthropic || true
+          git clone --depth 1 https://github.com/getsentry/sentry-mcp.git /tmp/sources/sentry || true
+
+      - name: Recreate pack directories
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          copy_skill() {
+            local target="$1"
+            local skill="${target##*/}"
+            shift
+            local repo source
+            for repo in "$@"; do
+              [ -d "/tmp/sources/$repo" ] || continue
+              source="$(find "/tmp/sources/$repo" -type f -name SKILL.md -path "*/$skill/SKILL.md" -print -quit)"
+              if [ -n "$source" ]; then
+                mkdir -p "$target"
+                cp -a "$(dirname "$source")/." "$target/"
+                return 0
+              fi
+            done
+            echo "Missing upstream skill: $target" >&2
+            return 1
+          }
+
+          rm -rf \
+            local-github-agentic-loop-pack \
+            ai-agent-documents-creative-skills \
+            ai-agent-ui-product-skills \
+            ai-agent-large-project-engineering-skills \
+            ai-agent-production-saas-skills \
+            ai-agent-ai-app-skills \
+            ai-agent-web-engineering-skills \
+            ai-agent-core-skills
+
+          while IFS='|' read -r target sources; do
+            [ -n "$target" ] || continue
+            # shellcheck disable=SC2086
+            copy_skill "$target" $sources
+          done <<'SKILLS'
+          ai-agent-ai-app-skills/ai-gateway|vercel openai
+          ai-agent-ai-app-skills/ai-sdk|vercel openai
+          ai-agent-ai-app-skills/chat-sdk|vercel openai
+          ai-agent-ai-app-skills/eve|vercel openai
+          ai-agent-ai-app-skills/json-render|vercel openai
+          ai-agent-ai-app-skills/satori|vercel openai
+          ai-agent-ai-app-skills/vercel-agent|vercel openai
+          ai-agent-ai-app-skills/vercel-flags|vercel openai
+          ai-agent-ai-app-skills/workflow|vercel openai
+          ai-agent-ai-app-skills/workflow-fundamentals|vercel openai
+          ai-agent-core-skills/agent-browser|openai vercel codex
+          ai-agent-core-skills/agent-browser-verify|openai vercel codex
+          ai-agent-core-skills/docs|openai codex vercel
+          ai-agent-core-skills/investigation-mode|openai vercel codex
+          ai-agent-core-skills/skill-creator|openai codex anthropic
+          ai-agent-core-skills/verification|openai vercel codex
+          ai-agent-documents-creative-skills/docx|openai anthropic
+          ai-agent-documents-creative-skills/imagegen|openai codex
+          ai-agent-documents-creative-skills/pdfs|openai anthropic
+          ai-agent-documents-creative-skills/slides|openai anthropic
+          ai-agent-documents-creative-skills/spreadsheets|openai anthropic
+          ai-agent-documents-creative-skills/video|openai
+          ai-agent-large-project-engineering-skills/agent-browser|vercel openai
+          ai-agent-large-project-engineering-skills/agent-browser-verify|vercel openai
+          ai-agent-large-project-engineering-skills/bootstrap|vercel openai
+          ai-agent-large-project-engineering-skills/investigation-mode|vercel openai
+          ai-agent-large-project-engineering-skills/microfrontends|vercel openai
+          ai-agent-large-project-engineering-skills/services|vercel openai
+          ai-agent-large-project-engineering-skills/turborepo|vercel openai
+          ai-agent-large-project-engineering-skills/verification|vercel openai
+          ai-agent-large-project-engineering-skills/workflow|vercel openai
+          ai-agent-large-project-engineering-skills/workflow-fundamentals|vercel openai
+          ai-agent-production-saas-skills/auth|vercel openai
+          ai-agent-production-saas-skills/cdn-caching|vercel openai
+          ai-agent-production-saas-skills/deployments-cicd|vercel openai
+          ai-agent-production-saas-skills/env-vars|vercel openai
+          ai-agent-production-saas-skills/observability|vercel openai
+          ai-agent-production-saas-skills/payments|vercel openai
+          ai-agent-production-saas-skills/runtime-cache|vercel openai
+          ai-agent-production-saas-skills/security|vercel openai
+          ai-agent-production-saas-skills/storage|vercel openai
+          ai-agent-production-saas-skills/vercel-functions|vercel openai
+          ai-agent-ui-product-skills/ai-elements|vercel openai
+          ai-agent-ui-product-skills/design-system|vercel openai
+          ai-agent-ui-product-skills/frontend-design|vercel openai
+          ai-agent-ui-product-skills/geist|vercel openai
+          ai-agent-ui-product-skills/react-best-practices|vercel openai
+          ai-agent-ui-product-skills/shadcn|vercel openai
+          ai-agent-web-engineering-skills/cms|vercel openai
+          ai-agent-web-engineering-skills/next-cache-components|vercel openai
+          ai-agent-web-engineering-skills/next-upgrade|vercel openai
+          ai-agent-web-engineering-skills/nextjs|vercel openai
+          ai-agent-web-engineering-skills/routing-middleware|vercel openai
+          ai-agent-web-engineering-skills/swr|vercel openai
+          ai-agent-web-engineering-skills/turbopack|vercel openai
+          ai-agent-web-engineering-skills/vercel-cli|vercel openai
+          local-github-agentic-loop-pack/codex|openai codex
+          local-github-agentic-loop-pack/gh-address-comments|openai codex
+          local-github-agentic-loop-pack/gh-fix-ci|openai codex
+          local-github-agentic-loop-pack/gh-workflow-loop|openai codex
+          local-github-agentic-loop-pack/github|openai codex
+          local-github-agentic-loop-pack/imagegen|openai codex
+          local-github-agentic-loop-pack/looping|openai codex
+          local-github-agentic-loop-pack/regen-website|openai codex
+          local-github-agentic-loop-pack/security-best-practices|openai codex
+          local-github-agentic-loop-pack/sentry|openai codex sentry
+          local-github-agentic-loop-pack/task-campaign-tests|openai codex
+          local-github-agentic-loop-pack/task-demo|openai codex
+          local-github-agentic-loop-pack/task-e2e-tests|openai codex
+          local-github-agentic-loop-pack/task-gradient-tests|openai codex
+          local-github-agentic-loop-pack/task-notebooks|openai codex
+          local-github-agentic-loop-pack/task-websocket-tests|openai codex
+          SKILLS
+
+          find . -type f -iname '*.png' -not -path './.git/*' -delete
+
+      - name: Generate repository README
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > README.md <<'README'
+          # ChatGPT Skills
+
+          A curated collection of reusable AI-agent skills, organized into eight focused packs. Each skill lives in its own folder and is anchored by a `SKILL.md` file; many skills also include scripts, references, examples, templates, and supporting assets.
+
+          ## Included packs
+
+          | Pack | Skills | Focus |
+          |---|---:|---|
+          | `local-github-agentic-loop-pack` | 16 | GitHub workflows, iterative agent loops, testing, security, and repository automation |
+          | `ai-agent-documents-creative-skills` | 6 | Documents, PDFs, slides, spreadsheets, image generation, and video |
+          | `ai-agent-ui-product-skills` | 6 | Product UI, design systems, React quality, typography, and shadcn/ui |
+          | `ai-agent-large-project-engineering-skills` | 10 | Large-project architecture, browser verification, monorepos, services, and durable workflows |
+          | `ai-agent-production-saas-skills` | 10 | Authentication, deployments, observability, payments, caching, security, storage, and functions |
+          | `ai-agent-ai-app-skills` | 10 | AI SDKs, gateways, chat, agents, rendering, flags, and workflows |
+          | `ai-agent-web-engineering-skills` | 8 | Next.js, caching, routing, CMS, SWR, Turbopack, and Vercel CLI |
+          | `ai-agent-core-skills` | 6 | Browser automation, documentation, investigation, verification, and skill creation |
+
+          **Total: 74 skills.**
+
+          ## Repository layout
+
+          ```text
+          <pack>/
+            <skill>/
+              SKILL.md
+              scripts/       # optional
+              references/    # optional
+              examples/      # optional
+              templates/     # optional
+          ```
+
+          ## Using a skill
+
+          Open the relevant `SKILL.md` and follow its trigger conditions, workflow, and validation guidance. Copy a complete skill directory when installing it elsewhere so companion scripts, references, examples, and templates remain available.
+
+          ## Skill catalog
+          README
+
+          for pack in \
+            local-github-agentic-loop-pack \
+            ai-agent-documents-creative-skills \
+            ai-agent-ui-product-skills \
+            ai-agent-large-project-engineering-skills \
+            ai-agent-production-saas-skills \
+            ai-agent-ai-app-skills \
+            ai-agent-web-engineering-skills \
+            ai-agent-core-skills; do
+            printf '\n### `%s`\n\n' "$pack" >> README.md
+            find "$pack" -mindepth 2 -maxdepth 2 -type f -name SKILL.md -printf '%h\n' \
+              | sed "s#^$pack/##" \
+              | sort \
+              | sed 's/^/- `/' \
+              | sed 's/$/`/' >> README.md
+          done
+
+          cat >> README.md <<'NOTES'
+
+          ## Notes
+
+          Decorative preview PNGs are intentionally omitted. Functional skill documentation, scripts, references, examples, templates, and other supporting files are retained.
+          NOTES
+
+      - name: Verify and commit
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(find . -type f -name SKILL.md -not -path './.git/*' | wc -l)" -eq 74
+          test -f README.md
+          rm -rf .upload
+          rm -f .gitkeep .github/workflows/materialize-skill-packs.yml .github/workflows/source-materialize.yml
+          rmdir .github/workflows .github 2>/dev/null || true
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add extracted skill packs and README [source-materialized]'
+          git push origin HEAD:agent/add-skill-packs
