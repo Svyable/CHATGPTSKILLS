@@ -1,0 +1,71 @@
+name: Finalize skill import PR
+
+on:
+  push:
+    branches:
+      - agent/add-skill-packs
+    paths:
+      - '.github/workflows/finalize-import-pr.yml'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  finalize:
+    if: ${{ !contains(github.event.head_commit.message, '[finalized]') }}
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/add-skill-packs
+          fetch-depth: 0
+
+      - name: Require completed import
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f README.md
+          test "$(find . -type f -name SKILL.md -not -path './.git/*' | wc -l)" -eq 74
+          test ! -d .upload
+
+      - name: Update draft pull request
+        shell: bash
+        run: |
+          cat > /tmp/pr-body.md <<'BODY'
+          ## What changed
+
+          - Added eight AI-agent skill-pack directories with their nested skill folders.
+          - Added 74 `SKILL.md` definitions and their functional companion scripts, references, examples, templates, and supporting files.
+          - Added a top-level README with the pack summary, repository layout, usage guidance, and complete skill catalog.
+          - Omitted decorative preview PNGs; functional skill files are retained.
+
+          ## Why
+
+          The GitHub browser uploader could not reliably preserve the uploaded archives' nested folder structure, so the packs were validated and materialized through the repository workflow.
+
+          ## Validation
+
+          - Verified all eight pack directories are present.
+          - Verified exactly 74 `SKILL.md` files.
+          - Verified `README.md` is present.
+          - Removed temporary upload and workflow staging files before finalizing the branch.
+          BODY
+          gh pr edit 1 --repo Svyable/CHATGPTSKILLS \
+            --title 'Add AI agent skill packs' \
+            --body-file /tmp/pr-body.md
+          gh pr ready 1 --repo Svyable/CHATGPTSKILLS --undo || true
+
+      - name: Remove finalizer
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/finalize-import-pr.yml
+          rmdir .github/workflows .github 2>/dev/null || true
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Finalize skill import pull request [finalized]'
+          git push origin HEAD:agent/add-skill-packs

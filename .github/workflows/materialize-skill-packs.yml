@@ -1,0 +1,82 @@
+name: Materialize skill packs
+
+on:
+  push:
+    branches:
+      - agent/add-skill-packs
+    paths:
+      - '.upload/**'
+      - '.github/workflows/materialize-skill-packs.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  materialize:
+    if: ${{ !contains(github.event.head_commit.message, '[materialized]') }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out import branch
+        uses: actions/checkout@v4
+        with:
+          ref: agent/add-skill-packs
+          fetch-depth: 0
+
+      - name: Validate mounted supplement
+        shell: bash
+        run: |
+          set -euo pipefail
+          test "$(stat -c%s .upload/supplement.tar.xz)" -gt 400000
+          xz -t .upload/supplement.tar.xz
+
+      - name: Recover staged prefix
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .upload/part-* > /tmp/prefix.xz.b64
+          base64 --decode /tmp/prefix.xz.b64 > /tmp/prefix.xz
+          mkdir -p /tmp/prefix-extracted
+          set +e
+          xz -dc /tmp/prefix.xz > /tmp/prefix.tar
+          tar -xf /tmp/prefix.tar -C /tmp/prefix-extracted --ignore-zeros
+          set -e
+          cp -a /tmp/prefix-extracted/. .
+
+      - name: Apply functional supplement
+        shell: bash
+        run: |
+          set -euo pipefail
+          tar -xJf .upload/supplement.tar.xz -C .
+          find . -type f -iname '*.png' -not -path './.git/*' -delete
+          rm -rf .upload
+          rm -f .gitkeep .github/workflows/materialize-skill-packs.yml
+          rmdir .github/workflows .github 2>/dev/null || true
+
+      - name: Verify imported repository
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -f README.md
+          test "$(find . -type f -name SKILL.md -not -path './.git/*' | wc -l)" -eq 74
+          test "$(find . -type f -not -path './.git/*' | wc -l)" -eq 534
+          for pack in \
+            local-github-agentic-loop-pack \
+            ai-agent-documents-creative-skills \
+            ai-agent-ui-product-skills \
+            ai-agent-large-project-engineering-skills \
+            ai-agent-production-saas-skills \
+            ai-agent-ai-app-skills \
+            ai-agent-web-engineering-skills \
+            ai-agent-core-skills; do
+            test -d "$pack"
+          done
+
+      - name: Commit materialized files
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Add extracted skill packs and README [materialized]'
+          git push origin HEAD:agent/add-skill-packs
