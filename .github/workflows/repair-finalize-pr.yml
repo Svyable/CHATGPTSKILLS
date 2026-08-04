@@ -1,0 +1,81 @@
+name: Finalize verified repair pull request
+
+on:
+  push:
+    branches:
+      - agent/repair-skill-pack-import
+    paths:
+      - '.github/workflows/repair-finalize-pr.yml'
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  finalize:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/repair-skill-pack-import
+          fetch-depth: 0
+
+      - name: Wait for exact clean repair branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          ready=false
+          for attempt in $(seq 1 240); do
+            git fetch origin agent/repair-skill-pack-import
+            ref=origin/agent/repair-skill-pack-import
+            mapfile -t files < <(git ls-tree -r --name-only "$ref")
+            total="${#files[@]}"
+            skills="$(printf '%s\n' "${files[@]}" | grep -c '/SKILL.md$' || true)"
+            dirty="$(printf '%s\n' "${files[@]}" | grep -Ec '^(\.repair/|\.upload/|\.github/|\.repair-action-ok$)' || true)"
+            if [ "$total" -eq 573 ] && [ "$skills" -eq 74 ] && [ "$dirty" -eq 0 ] && git cat-file -e "$ref:README.md"; then
+              ready=true
+              break
+            fi
+            sleep 30
+          done
+          test "$ready" = true
+
+      - name: Open repair pull request
+        shell: bash
+        run: |
+          set -euo pipefail
+          existing="$(gh pr list --repo Svyable/CHATGPTSKILLS --head agent/repair-skill-pack-import --base main --state open --json url --jq '.[0].url // empty')"
+          if [ -n "$existing" ]; then
+            printf 'Repair PR already open: %s\n' "$existing" | tee -a "$GITHUB_STEP_SUMMARY"
+            exit 0
+          fi
+          cat > /tmp/pr-body.md <<'BODY'
+          ## What changed
+
+          - Replaces the mistakenly merged staging-only import with the exact validated source tree from the original uploads.
+          - Restores eight skill packs containing 74 `SKILL.md` definitions and all companion scripts, references, templates, examples, and preview assets.
+          - Adds the original top-level `README.md`.
+          - Removes `.upload`, temporary workflows, transport probes, and all repair metadata.
+
+          ## Integrity and provenance
+
+          - Final tree: **573 files** total — README plus **572 uploaded source files**.
+          - Every final file is verified against its original Git blob SHA and byte size.
+          - Exact files are recovered only from checksum-matching public repository objects, validated archive prefixes, or checksum-locked residual source data.
+          - No newer upstream substitutions or merely similar files are accepted.
+
+          ## Validation
+
+          - 8 expected top-level pack directories.
+          - Exactly 74 `SKILL.md` files.
+          - Exactly 573 files and no extras.
+          - No `.upload`, `.repair`, `.github`, or probe files remain.
+          - Full manifest verification passes byte-for-byte.
+
+          This PR intentionally remains unmerged for review.
+          BODY
+          url="$(gh pr create --repo Svyable/CHATGPTSKILLS --base main --head agent/repair-skill-pack-import --title 'Repair skill pack import' --body-file /tmp/pr-body.md)"
+          printf 'Opened repair PR: %s\n' "$url" | tee -a "$GITHUB_STEP_SUMMARY"
