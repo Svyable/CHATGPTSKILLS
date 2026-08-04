@@ -59,12 +59,12 @@ ai-agent-documents-creative-skills/documents/agents/openai.yaml	MATCH	60a5ec1c5b
 ai-agent-documents-creative-skills/documents/assets/file-document.png	MATCH	64b65e5d955cc4ed5e0a53529ee1cd6097bee683	10876	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/assets/file-document.png
 ai-agent-documents-creative-skills/documents/examples/end_to_end_smoke_test.md	MATCH_PREFIX	54b60b328c1b98c530da7f0eb7da3df7b9277b20	930	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-documents-creative-skills/documents/examples/end_to_end_smoke_test.md
 ai-agent-documents-creative-skills/documents/manifest.txt	MATCH	dc8f5628d9527da95262644fb3fb9b2764c96f35	1999	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/manifest.txt
-ai-agent-documents-creative-skills/documents/ooxml/comments.md	UNMATCHED	997d0f1e7725157355cf97f93c09d3b5f688cf3f	1879			
-ai-agent-documents-creative-skills/documents/ooxml/hyperlinks_and_fields.md	UNMATCHED	c3d32c20902eaeb08a8b75ccc4288203ee277efd	2505			
-ai-agent-documents-creative-skills/documents/ooxml/rels_and_content_types.md	UNMATCHED	c1481871a9476dbdfdcc88ae0b68f36c99e08a48	1381			
-ai-agent-documents-creative-skills/documents/ooxml/tracked_changes.md	UNMATCHED	fcf451c3825acf8a590422e00624a4a5564c6a07	1653			
-ai-agent-documents-creative-skills/documents/references/design_presets.md	UNMATCHED	66eb404a0edeff72cd72cc1a347cd6ffe3d65328	17135			
-ai-agent-documents-creative-skills/documents/references/header_templates.md	UNMATCHED	5c098dc0a9f40f0fda3709006df7eca5e7e7f4a9	12726			
+ai-agent-documents-creative-skills/documents/ooxml/comments.md	MATCH_CODE_SEARCH	997d0f1e7725157355cf97f93c09d3b5f688cf3f	1879	AarnavBaddam/skills	997d0f1e7725157355cf97f93c09d3b5f688cf3f	documents/ooxml/comments.md
+ai-agent-documents-creative-skills/documents/ooxml/hyperlinks_and_fields.md	MATCH_CODE_SEARCH	c3d32c20902eaeb08a8b75ccc4288203ee277efd	2505	AarnavBaddam/skills	c3d32c20902eaeb08a8b75ccc4288203ee277efd	documents/ooxml/hyperlinks_and_fields.md
+ai-agent-documents-creative-skills/documents/ooxml/rels_and_content_types.md	MATCH_CODE_SEARCH	c1481871a9476dbdfdcc88ae0b68f36c99e08a48	1381	AarnavBaddam/skills	c1481871a9476dbdfdcc88ae0b68f36c99e08a48	documents/ooxml/rels_and_content_types.md
+ai-agent-documents-creative-skills/documents/ooxml/tracked_changes.md	MATCH_CODE_SEARCH	fcf451c3825acf8a590422e00624a4a5564c6a07	1653	AarnavBaddam/skills	fcf451c3825acf8a590422e00624a4a5564c6a07	documents/ooxml/tracked_changes.md
+ai-agent-documents-creative-skills/documents/references/design_presets.md	MATCH_CODE_SEARCH	66eb404a0edeff72cd72cc1a347cd6ffe3d65328	17135	AarnavBaddam/skills	66eb404a0edeff72cd72cc1a347cd6ffe3d65328	documents/references/design_presets.md
+ai-agent-documents-creative-skills/documents/references/header_templates.md	MATCH_CODE_SEARCH	5c098dc0a9f40f0fda3709006df7eca5e7e7f4a9	12726	AarnavBaddam/skills	5c098dc0a9f40f0fda3709006df7eca5e7e7f4a9	documents/references/header_templates.md
 ai-agent-documents-creative-skills/documents/render_docx.py	MATCH	e44a71df6f8826aa87122e3c173e7f954ff44dd6	15502	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/render_docx.py
 ai-agent-documents-creative-skills/documents/scripts/a11y_audit.py	MATCH	282d82b0bec8026176ce2a32d1329c208c51da1a	12835	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/scripts/a11y_audit.py
 ai-agent-documents-creative-skills/documents/scripts/accept_tracked_changes.py	MATCH	940de00708cb1ef37a93148ebb6e8ab7863a3170	5547	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/scripts/accept_tracked_changes.py
@@ -102,33 +102,33 @@ ai-agent-documents-creative-skills/documents/scripts/table_geometry.py	MATCH	421
 ai-agent-documents-creative-skills/documents/scripts/watermark_add.py	MATCH	b807f013bd85fa217884f0c8587cb41bcf51ca09	5322	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/scripts/watermark_add.py
 ai-agent-documents-creative-skills/documents/scripts/watermark_audit_remove.py	MATCH	4c9b32e739e298c3b14fec3ae4aa34d0fad23812	4668	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/scripts/watermark_audit_remove.py
 ai-agent-documents-creative-skills/documents/scripts/xlsx_to_docx_table.py	MATCH	7f22cff0acb136b89c0ff3baa5291763f34ea34c	5664	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/scripts/xlsx_to_docx_table.py
-ai-agent-documents-creative-skills/documents/tasks/accessibility_a11y.md	UNMATCHED	a357037bd13770d928753ee73946cd3d82cac964	1964			
-ai-agent-documents-creative-skills/documents/tasks/captions_crossrefs.md	UNMATCHED	31c65093fc8a7fd552dc9225e023a3682aba629f	3803			
-ai-agent-documents-creative-skills/documents/tasks/clean_tracked_changes.md	UNMATCHED	c5d173b5b3712bab486b291126a0385f865bdd1c	1669			
-ai-agent-documents-creative-skills/documents/tasks/comments_manage.md	UNMATCHED	72a65bdf35eb3222a4144207cd89e12a4c3f4a6a	2931			
-ai-agent-documents-creative-skills/documents/tasks/compare_diff.md	UNMATCHED	aa50e186407474226ae60fc147c974b5fc6dac0a	1172			
-ai-agent-documents-creative-skills/documents/tasks/create_edit.md	UNMATCHED	d1bba2b53b38a7f94b62b481f563e99dcab270ae	1981			
-ai-agent-documents-creative-skills/documents/tasks/fields_update.md	UNMATCHED	9f330abb3c536f80ecabd6650362e858f3aaed8c	2363			
-ai-agent-documents-creative-skills/documents/tasks/fixtures_edge_cases.md	UNMATCHED	582d52ebcaa064791dba650cee4712688460b71f	1707			
-ai-agent-documents-creative-skills/documents/tasks/footnotes_endnotes.md	UNMATCHED	bf6b6dce1c6d70b9daa9c46c3e6a604f3c3f3d96	1850			
-ai-agent-documents-creative-skills/documents/tasks/forms_content_controls.md	UNMATCHED	9a1b23b4df1f6cf25ac6882b37546cc1339a1792	2054			
-ai-agent-documents-creative-skills/documents/tasks/headings_numbering.md	UNMATCHED	760fd036bbe556460e565ef91bf256b5d1731416	1858			
-ai-agent-documents-creative-skills/documents/tasks/images_figures.md	UNMATCHED	52dd15342de00dfb0a89196951f8cedb62682754	1382			
-ai-agent-documents-creative-skills/documents/tasks/multi_doc_merge.md	UNMATCHED	3e7f7deea075bb980b3465eb59aba04c5b573277	1506			
-ai-agent-documents-creative-skills/documents/tasks/navigation_internal_links.md	UNMATCHED	7b52584e6f7346694e5c0bd85ac2e7e5a94e6c7d	2090			
-ai-agent-documents-creative-skills/documents/tasks/privacy_scrub_metadata.md	UNMATCHED	7f2d3d0e72a40c26f43378bb7554ebc0cb619ac7	839			
-ai-agent-documents-creative-skills/documents/tasks/protection_restrict_editing.md	UNMATCHED	e7b3a4054b642832de71b0e5909bc18d12fad720	1196			
-ai-agent-documents-creative-skills/documents/tasks/read_review.md	UNMATCHED	1652074bc12f3c4f7aa85c69487ad46c866ce3d8	2526			
-ai-agent-documents-creative-skills/documents/tasks/redaction_anonymization.md	UNMATCHED	f946303c7168daee3b3ce1a39e61d35b8dfa8256	2364			
-ai-agent-documents-creative-skills/documents/tasks/sections_layout.md	UNMATCHED	95014616f057535856991a910b61c8f8cdeb76b9	2220			
-ai-agent-documents-creative-skills/documents/tasks/style_lint_normalize.md	UNMATCHED	9294c9c17463343ace8ffc9601f9bafb226a67fa	2577			
-ai-agent-documents-creative-skills/documents/tasks/tables_spreadsheets.md	UNMATCHED	82854f19a5792ae798f3ba20dbf85986ac032efe	1116			
-ai-agent-documents-creative-skills/documents/tasks/templates_style_packs.md	UNMATCHED	9e3b036f639364abd129c5cd500b695fa4d78482	1268			
-ai-agent-documents-creative-skills/documents/tasks/toc_workflow.md	UNMATCHED	c012a347c539320dc7206490a7c95f365e4b92e6	1951			
-ai-agent-documents-creative-skills/documents/tasks/verify_render.md	UNMATCHED	e7fc9046de14c3b154321b221f98403f2de08ad2	2606			
-ai-agent-documents-creative-skills/documents/tasks/watermarks_background.md	UNMATCHED	40c21995aef2241a20939dc288e75c9531b9de6f	1331			
-ai-agent-documents-creative-skills/documents/troubleshooting/libreoffice_headless.md	UNMATCHED	3e8eca11ebd76e85e821c547faefdd83d62abc1a	1774			
-ai-agent-documents-creative-skills/documents/troubleshooting/run_splitting.md	UNMATCHED	8e8cf37a46dd4038fa0a1e1b3344252c5d10a766	821			
+ai-agent-documents-creative-skills/documents/tasks/accessibility_a11y.md	MATCH_CODE_SEARCH	a357037bd13770d928753ee73946cd3d82cac964	1964	AarnavBaddam/skills	a357037bd13770d928753ee73946cd3d82cac964	documents/tasks/accessibility_a11y.md
+ai-agent-documents-creative-skills/documents/tasks/captions_crossrefs.md	MATCH_CODE_SEARCH	31c65093fc8a7fd552dc9225e023a3682aba629f	3803	AarnavBaddam/skills	31c65093fc8a7fd552dc9225e023a3682aba629f	documents/tasks/captions_crossrefs.md
+ai-agent-documents-creative-skills/documents/tasks/clean_tracked_changes.md	MATCH_CODE_SEARCH	c5d173b5b3712bab486b291126a0385f865bdd1c	1669	AarnavBaddam/skills	c5d173b5b3712bab486b291126a0385f865bdd1c	documents/tasks/clean_tracked_changes.md
+ai-agent-documents-creative-skills/documents/tasks/comments_manage.md	MATCH_CODE_SEARCH	72a65bdf35eb3222a4144207cd89e12a4c3f4a6a	2931	AarnavBaddam/skills	72a65bdf35eb3222a4144207cd89e12a4c3f4a6a	documents/tasks/comments_manage.md
+ai-agent-documents-creative-skills/documents/tasks/compare_diff.md	MATCH_CODE_SEARCH	aa50e186407474226ae60fc147c974b5fc6dac0a	1172	AarnavBaddam/skills	aa50e186407474226ae60fc147c974b5fc6dac0a	documents/tasks/compare_diff.md
+ai-agent-documents-creative-skills/documents/tasks/create_edit.md	MATCH_CODE_SEARCH	d1bba2b53b38a7f94b62b481f563e99dcab270ae	1981	AarnavBaddam/skills	d1bba2b53b38a7f94b62b481f563e99dcab270ae	documents/tasks/create_edit.md
+ai-agent-documents-creative-skills/documents/tasks/fields_update.md	MATCH_CODE_SEARCH	9f330abb3c536f80ecabd6650362e858f3aaed8c	2363	AarnavBaddam/skills	9f330abb3c536f80ecabd6650362e858f3aaed8c	documents/tasks/fields_update.md
+ai-agent-documents-creative-skills/documents/tasks/fixtures_edge_cases.md	MATCH_CODE_SEARCH	582d52ebcaa064791dba650cee4712688460b71f	1707	AarnavBaddam/skills	582d52ebcaa064791dba650cee4712688460b71f	documents/tasks/fixtures_edge_cases.md
+ai-agent-documents-creative-skills/documents/tasks/footnotes_endnotes.md	MATCH_CODE_SEARCH	bf6b6dce1c6d70b9daa9c46c3e6a604f3c3f3d96	1850	AarnavBaddam/skills	bf6b6dce1c6d70b9daa9c46c3e6a604f3c3f3d96	documents/tasks/footnotes_endnotes.md
+ai-agent-documents-creative-skills/documents/tasks/forms_content_controls.md	MATCH_CODE_SEARCH	9a1b23b4df1f6cf25ac6882b37546cc1339a1792	2054	AarnavBaddam/skills	9a1b23b4df1f6cf25ac6882b37546cc1339a1792	documents/tasks/forms_content_controls.md
+ai-agent-documents-creative-skills/documents/tasks/headings_numbering.md	MATCH_CODE_SEARCH	760fd036bbe556460e565ef91bf256b5d1731416	1858	AarnavBaddam/skills	760fd036bbe556460e565ef91bf256b5d1731416	documents/tasks/headings_numbering.md
+ai-agent-documents-creative-skills/documents/tasks/images_figures.md	MATCH_CODE_SEARCH	52dd15342de00dfb0a89196951f8cedb62682754	1382	AarnavBaddam/skills	52dd15342de00dfb0a89196951f8cedb62682754	documents/tasks/images_figures.md
+ai-agent-documents-creative-skills/documents/tasks/multi_doc_merge.md	MATCH_CODE_SEARCH	3e7f7deea075bb980b3465eb59aba04c5b573277	1506	AarnavBaddam/skills	3e7f7deea075bb980b3465eb59aba04c5b573277	documents/tasks/multi_doc_merge.md
+ai-agent-documents-creative-skills/documents/tasks/navigation_internal_links.md	MATCH_CODE_SEARCH	7b52584e6f7346694e5c0bd85ac2e7e5a94e6c7d	2090	AarnavBaddam/skills	7b52584e6f7346694e5c0bd85ac2e7e5a94e6c7d	documents/tasks/navigation_internal_links.md
+ai-agent-documents-creative-skills/documents/tasks/privacy_scrub_metadata.md	MATCH_CODE_SEARCH	7f2d3d0e72a40c26f43378bb7554ebc0cb619ac7	839	AarnavBaddam/skills	7f2d3d0e72a40c26f43378bb7554ebc0cb619ac7	documents/tasks/privacy_scrub_metadata.md
+ai-agent-documents-creative-skills/documents/tasks/protection_restrict_editing.md	MATCH_CODE_SEARCH	e7b3a4054b642832de71b0e5909bc18d12fad720	1196	AarnavBaddam/skills	e7b3a4054b642832de71b0e5909bc18d12fad720	documents/tasks/protection_restrict_editing.md
+ai-agent-documents-creative-skills/documents/tasks/read_review.md	MATCH_CODE_SEARCH	1652074bc12f3c4f7aa85c69487ad46c866ce3d8	2526	AarnavBaddam/skills	1652074bc12f3c4f7aa85c69487ad46c866ce3d8	documents/tasks/read_review.md
+ai-agent-documents-creative-skills/documents/tasks/redaction_anonymization.md	MATCH_CODE_SEARCH	f946303c7168daee3b3ce1a39e61d35b8dfa8256	2364	AarnavBaddam/skills	f946303c7168daee3b3ce1a39e61d35b8dfa8256	documents/tasks/redaction_anonymization.md
+ai-agent-documents-creative-skills/documents/tasks/sections_layout.md	MATCH_CODE_SEARCH	95014616f057535856991a910b61c8f8cdeb76b9	2220	AarnavBaddam/skills	95014616f057535856991a910b61c8f8cdeb76b9	documents/tasks/sections_layout.md
+ai-agent-documents-creative-skills/documents/tasks/style_lint_normalize.md	MATCH_CODE_SEARCH	9294c9c17463343ace8ffc9601f9bafb226a67fa	2577	AarnavBaddam/skills	9294c9c17463343ace8ffc9601f9bafb226a67fa	documents/tasks/style_lint_normalize.md
+ai-agent-documents-creative-skills/documents/tasks/tables_spreadsheets.md	MATCH_CODE_SEARCH	82854f19a5792ae798f3ba20dbf85986ac032efe	1116	AarnavBaddam/skills	82854f19a5792ae798f3ba20dbf85986ac032efe	documents/tasks/tables_spreadsheets.md
+ai-agent-documents-creative-skills/documents/tasks/templates_style_packs.md	MATCH_CODE_SEARCH	9e3b036f639364abd129c5cd500b695fa4d78482	1268	AarnavBaddam/skills	9e3b036f639364abd129c5cd500b695fa4d78482	documents/tasks/templates_style_packs.md
+ai-agent-documents-creative-skills/documents/tasks/toc_workflow.md	MATCH_CODE_SEARCH	c012a347c539320dc7206490a7c95f365e4b92e6	1951	AarnavBaddam/skills	c012a347c539320dc7206490a7c95f365e4b92e6	documents/tasks/toc_workflow.md
+ai-agent-documents-creative-skills/documents/tasks/verify_render.md	MATCH_CODE_SEARCH	e7fc9046de14c3b154321b221f98403f2de08ad2	2606	AarnavBaddam/skills	e7fc9046de14c3b154321b221f98403f2de08ad2	documents/tasks/verify_render.md
+ai-agent-documents-creative-skills/documents/tasks/watermarks_background.md	MATCH_CODE_SEARCH	40c21995aef2241a20939dc288e75c9531b9de6f	1331	AarnavBaddam/skills	40c21995aef2241a20939dc288e75c9531b9de6f	documents/tasks/watermarks_background.md
+ai-agent-documents-creative-skills/documents/troubleshooting/libreoffice_headless.md	MATCH_CODE_SEARCH	3e8eca11ebd76e85e821c547faefdd83d62abc1a	1774	AarnavBaddam/skills	3e8eca11ebd76e85e821c547faefdd83d62abc1a	documents/troubleshooting/libreoffice_headless.md
+ai-agent-documents-creative-skills/documents/troubleshooting/run_splitting.md	MATCH_CODE_SEARCH	8e8cf37a46dd4038fa0a1e1b3344252c5d10a766	821	AarnavBaddam/skills	8e8cf37a46dd4038fa0a1e1b3344252c5d10a766	documents/troubleshooting/run_splitting.md
 ai-agent-documents-creative-skills/imagegen/LICENSE.txt	MATCH	13e25df86ce06eb6488e6a6bc5c5847f5dedc352	10776	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/imagegen/LICENSE.txt
 ai-agent-documents-creative-skills/imagegen/SKILL.md	MATCH	4285e5e6419e87bb2250daf2cafe099c1aab1e80	24003	openai-codex	bbcf5e10fb493f0f46e4155455e1b5c4f69cfe63	codex-rs/skills/src/assets/samples/imagegen/SKILL.md
 ai-agent-documents-creative-skills/imagegen/agents/openai.yaml	MATCH	5e01d4410ef4918b45d942175e7ddc39ba7ab5d2	275	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/imagegen/agents/openai.yaml
@@ -146,30 +146,30 @@ ai-agent-documents-creative-skills/pdf/agents/openai.yaml	MATCH	c77dae945b65005b
 ai-agent-documents-creative-skills/pdf/assets/file-document.png	MATCH	3a59e4c9937582258900a7c8419d3a27d51dd52f	1550	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/pdf/assets/file-document.png
 ai-agent-documents-creative-skills/presentations/SKILL.md	UNMATCHED	de79f340d3a338023d375b53b0a834f106956176	11827			
 ai-agent-documents-creative-skills/presentations/agents/openai.yaml	MATCH	820d52556af2bcaf12f2cd61c0f9c8f1a3c2365f	310	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/agents/openai.yaml
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/API_QUICK_START.md	UNMATCHED	1e2a9eaf74d448f9f444b29b235da1ef126f625b	7874			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/API_DOCS.md	UNMATCHED	6419534d4312bc8403c74c37d16d62f3840e810d	12139			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/auto-layout.spec.md	UNMATCHED	baa538a58af8a667f20f309ce8a04b85961b5046	2032			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/charts.spec.md	UNMATCHED	24650e517bf4c9a9c30f8fd649248c3f445d87e3	8108			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/comments.md	UNMATCHED	4761943c1eff743d77e05f46573ada5362fee568	2154			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/connectors.md	UNMATCHED	fc00dcbfaf0533292c9939e050de9e895c86f52b	5437			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/cookbook/imported-deck.md	UNMATCHED	2d98b4b738e3753db7188d63fd677643e8afd328	5549			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/cookbook/layout.md	UNMATCHED	d0de176b5fa89cb6bba740f018f27487be320792	12942			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/fill.spec.md	UNMATCHED	219583cf6cadd0ca1b86307bf86128af4cb66b94	4989			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/help.md	UNMATCHED	db0c40b5e2164a193a9f5f4e9e3e47766418c102	6627			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/images.spec.md	UNMATCHED	6257b329ee7f89b5b316db20197f0ed8e55d9962	6402			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/inspect.md	UNMATCHED	566e74a88df74cd3edeb854e2c7415f2a652def1	5327			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/jsx.md	UNMATCHED	18aa0da5f7b4d781be1f200fb4b59cc5b7f13f78	9841			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/layout.spec.md	UNMATCHED	52597cc3ed17d3b0989a7d620c46887bff152f7f	2250			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/master.spec.md	UNMATCHED	f97013b366106aed6892a35a0c98878590551658	1442			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/presentation.spec.md	UNMATCHED	b1bf26b86af7f64eb9a953f16177166234f2ee93	5033			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/rich-text.spec.md	UNMATCHED	e8082d5949dfcffc62c152f268d0e8affffaa784	5800			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/shapes.spec.md	UNMATCHED	1b962b529edbea88dbf1b02f281b7c96353abb03	5628			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/slide.spec.md	UNMATCHED	60a6e915012a7eefb7c0ce3169adb4528003c279	4663			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/speaker-notes.spec.md	UNMATCHED	32d1e4569b85a34dfa4abbdddf46df62657ad93d	1072			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/styles.spec.md	UNMATCHED	d08a58b13c635fec831d4725a66b04ef45c090fd	2029			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/tables.spec.md	UNMATCHED	985c34d34c0978a5a2df3f0fd2835d16fc621474	3944			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/theme.spec.md	UNMATCHED	bc6bc38da090d924648dcb66d1acb164c86a60b8	1657			
-ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/tokens.md	UNMATCHED	0e31742f8055a589b6e80792bfb9c7c6ff48cd63	11456			
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/API_QUICK_START.md	MATCH_CODE_SEARCH	1e2a9eaf74d448f9f444b29b235da1ef126f625b	7874	AarnavBaddam/skills	1e2a9eaf74d448f9f444b29b235da1ef126f625b	presentations/artifact_tool/API_QUICK_START.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/API_DOCS.md	MATCH_CODE_SEARCH	6419534d4312bc8403c74c37d16d62f3840e810d	12139	AarnavBaddam/skills	6419534d4312bc8403c74c37d16d62f3840e810d	presentations/artifact_tool/api/API_DOCS.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/auto-layout.spec.md	MATCH_CODE_SEARCH	baa538a58af8a667f20f309ce8a04b85961b5046	2032	AarnavBaddam/skills	baa538a58af8a667f20f309ce8a04b85961b5046	presentations/artifact_tool/api/references/auto-layout.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/charts.spec.md	MATCH_CODE_SEARCH	24650e517bf4c9a9c30f8fd649248c3f445d87e3	8108	AarnavBaddam/skills	24650e517bf4c9a9c30f8fd649248c3f445d87e3	presentations/artifact_tool/api/references/charts.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/comments.md	MATCH_CODE_SEARCH	4761943c1eff743d77e05f46573ada5362fee568	2154	AarnavBaddam/skills	4761943c1eff743d77e05f46573ada5362fee568	presentations/artifact_tool/api/references/comments.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/connectors.md	MATCH_CODE_SEARCH	fc00dcbfaf0533292c9939e050de9e895c86f52b	5437	AarnavBaddam/skills	fc00dcbfaf0533292c9939e050de9e895c86f52b	presentations/artifact_tool/api/references/connectors.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/cookbook/imported-deck.md	MATCH_CODE_SEARCH	2d98b4b738e3753db7188d63fd677643e8afd328	5549	AarnavBaddam/skills	2d98b4b738e3753db7188d63fd677643e8afd328	presentations/artifact_tool/api/references/cookbook/imported-deck.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/cookbook/layout.md	MATCH_CODE_SEARCH	d0de176b5fa89cb6bba740f018f27487be320792	12942	AarnavBaddam/skills	d0de176b5fa89cb6bba740f018f27487be320792	presentations/artifact_tool/api/references/cookbook/layout.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/fill.spec.md	MATCH_CODE_SEARCH	219583cf6cadd0ca1b86307bf86128af4cb66b94	4989	AarnavBaddam/skills	219583cf6cadd0ca1b86307bf86128af4cb66b94	presentations/artifact_tool/api/references/fill.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/help.md	MATCH_CODE_SEARCH	db0c40b5e2164a193a9f5f4e9e3e47766418c102	6627	AarnavBaddam/skills	db0c40b5e2164a193a9f5f4e9e3e47766418c102	presentations/artifact_tool/api/references/help.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/images.spec.md	MATCH_CODE_SEARCH	6257b329ee7f89b5b316db20197f0ed8e55d9962	6402	AarnavBaddam/skills	6257b329ee7f89b5b316db20197f0ed8e55d9962	presentations/artifact_tool/api/references/images.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/inspect.md	MATCH_CODE_SEARCH	566e74a88df74cd3edeb854e2c7415f2a652def1	5327	AarnavBaddam/skills	566e74a88df74cd3edeb854e2c7415f2a652def1	presentations/artifact_tool/api/references/inspect.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/jsx.md	MATCH_CODE_SEARCH	18aa0da5f7b4d781be1f200fb4b59cc5b7f13f78	9841	AarnavBaddam/skills	18aa0da5f7b4d781be1f200fb4b59cc5b7f13f78	presentations/artifact_tool/api/references/jsx.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/layout.spec.md	MATCH_CODE_SEARCH	52597cc3ed17d3b0989a7d620c46887bff152f7f	2250	AarnavBaddam/skills	52597cc3ed17d3b0989a7d620c46887bff152f7f	presentations/artifact_tool/api/references/layout.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/master.spec.md	MATCH_CODE_SEARCH	f97013b366106aed6892a35a0c98878590551658	1442	AarnavBaddam/skills	f97013b366106aed6892a35a0c98878590551658	presentations/artifact_tool/api/references/master.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/presentation.spec.md	MATCH_CODE_SEARCH	b1bf26b86af7f64eb9a953f16177166234f2ee93	5033	AarnavBaddam/skills	b1bf26b86af7f64eb9a953f16177166234f2ee93	presentations/artifact_tool/api/references/presentation.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/rich-text.spec.md	MATCH_CODE_SEARCH	e8082d5949dfcffc62c152f268d0e8affffaa784	5800	AarnavBaddam/skills	e8082d5949dfcffc62c152f268d0e8affffaa784	presentations/artifact_tool/api/references/rich-text.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/shapes.spec.md	MATCH_CODE_SEARCH	1b962b529edbea88dbf1b02f281b7c96353abb03	5628	AarnavBaddam/skills	1b962b529edbea88dbf1b02f281b7c96353abb03	presentations/artifact_tool/api/references/shapes.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/slide.spec.md	MATCH_CODE_SEARCH	60a6e915012a7eefb7c0ce3169adb4528003c279	4663	AarnavBaddam/skills	60a6e915012a7eefb7c0ce3169adb4528003c279	presentations/artifact_tool/api/references/slide.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/speaker-notes.spec.md	MATCH_CODE_SEARCH	32d1e4569b85a34dfa4abbdddf46df62657ad93d	1072	AarnavBaddam/skills	32d1e4569b85a34dfa4abbdddf46df62657ad93d	presentations/artifact_tool/api/references/speaker-notes.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/styles.spec.md	MATCH_CODE_SEARCH	d08a58b13c635fec831d4725a66b04ef45c090fd	2029	AarnavBaddam/skills	d08a58b13c635fec831d4725a66b04ef45c090fd	presentations/artifact_tool/api/references/styles.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/tables.spec.md	MATCH_CODE_SEARCH	985c34d34c0978a5a2df3f0fd2835d16fc621474	3944	AarnavBaddam/skills	985c34d34c0978a5a2df3f0fd2835d16fc621474	presentations/artifact_tool/api/references/tables.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/theme.spec.md	MATCH_CODE_SEARCH	bc6bc38da090d924648dcb66d1acb164c86a60b8	1657	AarnavBaddam/skills	bc6bc38da090d924648dcb66d1acb164c86a60b8	presentations/artifact_tool/api/references/theme.spec.md
+ai-agent-documents-creative-skills/presentations/artifact_tool_docs/api/references/tokens.md	MATCH_CODE_SEARCH	0e31742f8055a589b6e80792bfb9c7c6ff48cd63	11456	AarnavBaddam/skills	0e31742f8055a589b6e80792bfb9c7c6ff48cd63	presentations/artifact_tool/api/references/tokens.md
 ai-agent-documents-creative-skills/presentations/assets/builtin_templates/codex-grid-layout-library/artifact-tool-compose/content-tokens.json	MATCH	8fe0a9bb0fd17b09d1b12907a9e0ce506147f047	410321	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/assets/builtin_templates/codex-grid-layout-library/artifact-tool-compose/content-tokens.json
 ai-agent-documents-creative-skills/presentations/assets/builtin_templates/codex-grid-layout-library/artifact-tool-compose/index.mjs	MATCH	e1ac726287cc43e012abba7d28c138fee0b33426	1668	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/assets/builtin_templates/codex-grid-layout-library/artifact-tool-compose/index.mjs
 ai-agent-documents-creative-skills/presentations/assets/builtin_templates/codex-grid-layout-library/artifact-tool-compose/runtime.mjs	MATCH	aa016e1127058543ce0814bfc59688df10eb12ca	155	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/assets/builtin_templates/codex-grid-layout-library/artifact-tool-compose/runtime.mjs
@@ -233,10 +233,10 @@ ai-agent-documents-creative-skills/presentations/assets/builtin_templates/codex-
 ai-agent-documents-creative-skills/presentations/assets/builtin_templates/codex-grid-layout-library/design_tokens.json	MATCH	3f6092e69f9c158b6bafa253ab2e6bd4807d4bd3	1933	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/assets/builtin_templates/codex-grid-layout-library/design_tokens.json
 ai-agent-documents-creative-skills/presentations/assets/file-presentation.png	MATCH	5fce54380638fa32d4043a8c234cf362b277c9f4	11787	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/assets/file-presentation.png
 ai-agent-documents-creative-skills/presentations/builtin_templates_support/README.md	MATCH	0dc5c0b399e49d4014f13587addb7b639d7b2336	1357	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/builtin_templates_support/README.md
-ai-agent-documents-creative-skills/presentations/builtin_templates_support/codex-grid-layout-library/ARTIFACT.md	UNMATCHED	47c01b227fa57e0d0efa5f03e98ff3aba1081a46	2835			
+ai-agent-documents-creative-skills/presentations/builtin_templates_support/codex-grid-layout-library/ARTIFACT.md	MATCH_CODE_SEARCH	47c01b227fa57e0d0efa5f03e98ff3aba1081a46	2835	AarnavBaddam/skills	47c01b227fa57e0d0efa5f03e98ff3aba1081a46	presentations/builtin_templates_support/codex-grid-layout-library/ARTIFACT.md
 ai-agent-documents-creative-skills/presentations/builtin_templates_support/codex-grid-layout-library/manifest.json	MATCH	2da0584b7b9e3fe5237b00d426c79c929f63275d	2086	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/builtin_templates_support/codex-grid-layout-library/manifest.json
 ai-agent-documents-creative-skills/presentations/builtin_templates_support/codex-grid-layout-library/presentation.md	UNMATCHED	aec124f206e6dfd8cfb05f72f8b96c3953820c62	637			
-ai-agent-documents-creative-skills/presentations/builtin_templates_support/prompts/common.md	UNMATCHED	04da367821f02d91cf264731ad7271a8ec6289be	262			
+ai-agent-documents-creative-skills/presentations/builtin_templates_support/prompts/common.md	MATCH_CODE_SEARCH	04da367821f02d91cf264731ad7271a8ec6289be	262	AarnavBaddam/skills	04da367821f02d91cf264731ad7271a8ec6289be	presentations/builtin_templates_support/prompts/common.md
 ai-agent-documents-creative-skills/presentations/builtin_templates_support/scripts/create-presentation.mjs	MATCH	a35a0b526619e8edf24082bcdb9d3ba2e978889b	1396	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/builtin_templates_support/scripts/create-presentation.mjs
 ai-agent-documents-creative-skills/presentations/builtin_templates_support/scripts/index.json	MATCH	fa2a81621ae01b8c57f97f836b2f3f97096977f2	871	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/builtin_templates_support/scripts/index.json
 ai-agent-documents-creative-skills/presentations/builtin_templates_support/scripts/reconstruct-artifact-tool.mjs	MATCH	8b6b3876324a8984a46fac7930de834d6b6b8100	83	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/builtin_templates_support/scripts/reconstruct-artifact-tool.mjs
@@ -259,16 +259,16 @@ ai-agent-documents-creative-skills/presentations/template_following_scripts/prep
 ai-agent-documents-creative-skills/presentations/template_following_scripts/validate_template_plan.mjs	MATCH	6c15055a12a03575d677dc0b8bf2a14c97cd2e9c	18267	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/presentations/template_following_scripts/validate_template_plan.mjs
 ai-agent-documents-creative-skills/spreadsheets/SKILL.md	UNMATCHED	0b3011931b7698467569108d3414a9120aef8fe9	14250			
 ai-agent-documents-creative-skills/spreadsheets/agents/openai.yaml	MATCH	818ecde9b6428fd1c03462f4386919868e434503	364	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/spreadsheets/agents/openai.yaml
-ai-agent-documents-creative-skills/spreadsheets/artifact_tool_docs/API_QUICK_START.md	UNMATCHED	a4b8938f26eaeedb5a3d3099ac7b00b8a11ea0a7	25213			
+ai-agent-documents-creative-skills/spreadsheets/artifact_tool_docs/API_QUICK_START.md	MATCH_CODE_SEARCH	a4b8938f26eaeedb5a3d3099ac7b00b8a11ea0a7	25213	AarnavBaddam/skills	a4b8938f26eaeedb5a3d3099ac7b00b8a11ea0a7	spreadsheets/artifact_tool_docs/API_QUICK_START.md
 ai-agent-documents-creative-skills/spreadsheets/assets/file-spreadsheet.png	MATCH	736d02fcc39d753513d59db59273cec115a81a5c	11988	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/spreadsheets/assets/file-spreadsheet.png
-ai-agent-documents-creative-skills/spreadsheets/domain_guidance/corporate_finance_fpa.md	UNMATCHED	cb375efd44148f6ecd88123c40cc025becf39274	9038			
-ai-agent-documents-creative-skills/spreadsheets/domain_guidance/financial_models.md	UNMATCHED	377b8399009c2ffb0c371985d098f9c9c88a6978	16112			
-ai-agent-documents-creative-skills/spreadsheets/domain_guidance/healthcare.md	UNMATCHED	29c3ef7eb054b35705e4d2ae651315184c959890	4273			
-ai-agent-documents-creative-skills/spreadsheets/domain_guidance/marketing_advertising.md	UNMATCHED	40ff8b6961aac63c27e7cf863a79cfde7631863f	3943			
-ai-agent-documents-creative-skills/spreadsheets/domain_guidance/scientific_research.md	UNMATCHED	32a3179255593e999d222c63488732c3830fda17	2906			
-ai-agent-documents-creative-skills/spreadsheets/features/charts.md	UNMATCHED	0d11cf918ec3855daffb5a007bc0df2e42a06923	5784			
-ai-agent-documents-creative-skills/spreadsheets/routing/google_sheets.md	UNMATCHED	2a11619603f42440146d0c29c64f2152029b2e7a	1456			
-ai-agent-documents-creative-skills/spreadsheets/style_guidelines.md	UNMATCHED	36aa392aa989aa8ac8db3468733cf9c1009b12fd	5387			
+ai-agent-documents-creative-skills/spreadsheets/domain_guidance/corporate_finance_fpa.md	MATCH_CODE_SEARCH	cb375efd44148f6ecd88123c40cc025becf39274	9038	AarnavBaddam/skills	cb375efd44148f6ecd88123c40cc025becf39274	spreadsheets/domain_guidance/corporate_finance_fpa.md
+ai-agent-documents-creative-skills/spreadsheets/domain_guidance/financial_models.md	MATCH_CODE_SEARCH	377b8399009c2ffb0c371985d098f9c9c88a6978	16112	AarnavBaddam/skills	377b8399009c2ffb0c371985d098f9c9c88a6978	spreadsheets/domain_guidance/financial_models.md
+ai-agent-documents-creative-skills/spreadsheets/domain_guidance/healthcare.md	MATCH_CODE_SEARCH	29c3ef7eb054b35705e4d2ae651315184c959890	4273	AarnavBaddam/skills	29c3ef7eb054b35705e4d2ae651315184c959890	spreadsheets/domain_guidance/healthcare.md
+ai-agent-documents-creative-skills/spreadsheets/domain_guidance/marketing_advertising.md	MATCH_CODE_SEARCH	40ff8b6961aac63c27e7cf863a79cfde7631863f	3943	AarnavBaddam/skills	40ff8b6961aac63c27e7cf863a79cfde7631863f	spreadsheets/domain_guidance/marketing_advertising.md
+ai-agent-documents-creative-skills/spreadsheets/domain_guidance/scientific_research.md	MATCH_CODE_SEARCH	32a3179255593e999d222c63488732c3830fda17	2906	AarnavBaddam/skills	32a3179255593e999d222c63488732c3830fda17	spreadsheets/domain_guidance/scientific_research.md
+ai-agent-documents-creative-skills/spreadsheets/features/charts.md	MATCH_CODE_SEARCH	0d11cf918ec3855daffb5a007bc0df2e42a06923	5784	AarnavBaddam/skills	0d11cf918ec3855daffb5a007bc0df2e42a06923	spreadsheets/features/charts.md
+ai-agent-documents-creative-skills/spreadsheets/routing/google_sheets.md	MATCH_CODE_SEARCH	2a11619603f42440146d0c29c64f2152029b2e7a	1456	AarnavBaddam/skills	2a11619603f42440146d0c29c64f2152029b2e7a	spreadsheets/routing/google_sheets.md
+ai-agent-documents-creative-skills/spreadsheets/style_guidelines.md	MATCH_CODE_SEARCH	36aa392aa989aa8ac8db3468733cf9c1009b12fd	5387	AarnavBaddam/skills	36aa392aa989aa8ac8db3468733cf9c1009b12fd	spreadsheets/style_guidelines.md
 ai-agent-documents-creative-skills/visualize/SKILL.md	UNMATCHED	0e6827de478516289df6da91f9f0ebac9e3484d8	20892			
 ai-agent-documents-creative-skills/visualize/assets/lucide-initialization.js	UNMATCHED	329e5708461103208238548071879a337256f57b	313			
 ai-agent-documents-creative-skills/visualize/assets/runtime-dependencies.html	UNMATCHED	41bfe392dc83a4e23a7de1c9be75ce8ee8603411	392			
@@ -277,56 +277,56 @@ ai-agent-documents-creative-skills/visualize/assets/visualize.css	UNMATCHED	f0d8
 ai-agent-documents-creative-skills/visualize/runtime.py	UNMATCHED	9eb66a91d2e99a59e4022c497a6eb6a7ceab49d5	2258			
 ai-agent-documents-creative-skills/visualize/scripts/export_html.py	UNMATCHED	26bbc9bc0e126d38838c48bd63e4981fd1eda118	3670			
 ai-agent-documents-creative-skills/writing-blocks/SKILL.md	UNMATCHED	663105c4c7c577dd57844de04c9cf28753018e3c	3133			
-ai-agent-large-project-engineering-skills/bootstrap/SKILL.md	UNMATCHED	0a0421fe89dcc007e41ce25d068dda2e05487b07	6987			
-ai-agent-large-project-engineering-skills/bootstrap/agents/openai.yaml	UNMATCHED	6edb54d6b8368a2e9d09bf6d6006cb9c4857623d	173			
+ai-agent-large-project-engineering-skills/bootstrap/SKILL.md	MATCH_CODE_SEARCH	0a0421fe89dcc007e41ce25d068dda2e05487b07	6987	AarnavBaddam/skills	0a0421fe89dcc007e41ce25d068dda2e05487b07	bootstrap/SKILL.md
+ai-agent-large-project-engineering-skills/bootstrap/agents/openai.yaml	MATCH_CODE_SEARCH	6edb54d6b8368a2e9d09bf6d6006cb9c4857623d	173	AarnavBaddam/skills	6edb54d6b8368a2e9d09bf6d6006cb9c4857623d	bootstrap/agents/openai.yaml
 ai-agent-large-project-engineering-skills/marketplace/SKILL.md	UNMATCHED	a8e35d6cfe2d5add0c1dd7e7513b03fad640a1f5	6614			
-ai-agent-large-project-engineering-skills/marketplace/agents/openai.yaml	UNMATCHED	23a3ba692fe5ccb9d4b60d9f31903f8e65240084	177			
-ai-agent-large-project-engineering-skills/micro/SKILL.md	UNMATCHED	78039a98d92cf1de2ca56a1c8fea27b2b09273f2	4001			
-ai-agent-large-project-engineering-skills/micro/agents/openai.yaml	UNMATCHED	5a5b3c557709ed3510a0e1593ebeacc93b11108f	140			
-ai-agent-large-project-engineering-skills/microfrontends/SKILL.md	UNMATCHED	0e1ec0ba6a4a6ef1d6e33416f73108c3456228b4	4305			
-ai-agent-large-project-engineering-skills/microfrontends/agents/openai.yaml	UNMATCHED	27a9683545e16ca035f94f0361d1bf91ef087eb0	105			
+ai-agent-large-project-engineering-skills/marketplace/agents/openai.yaml	MATCH_CODE_SEARCH	23a3ba692fe5ccb9d4b60d9f31903f8e65240084	177	Kodik-AI/kodik	23a3ba692fe5ccb9d4b60d9f31903f8e65240084	marketplace/plugins/vercel/skills/marketplace/agents/openai.yaml
+ai-agent-large-project-engineering-skills/micro/SKILL.md	MATCH_CODE_SEARCH	78039a98d92cf1de2ca56a1c8fea27b2b09273f2	4001	AarnavBaddam/skills	78039a98d92cf1de2ca56a1c8fea27b2b09273f2	micro/SKILL.md
+ai-agent-large-project-engineering-skills/micro/agents/openai.yaml	MATCH_CODE_SEARCH	5a5b3c557709ed3510a0e1593ebeacc93b11108f	140	AarnavBaddam/skills	5a5b3c557709ed3510a0e1593ebeacc93b11108f	micro/agents/openai.yaml
+ai-agent-large-project-engineering-skills/microfrontends/SKILL.md	MATCH_CODE_SEARCH	0e1ec0ba6a4a6ef1d6e33416f73108c3456228b4	4305	AarnavBaddam/skills	0e1ec0ba6a4a6ef1d6e33416f73108c3456228b4	microfrontends/SKILL.md
+ai-agent-large-project-engineering-skills/microfrontends/agents/openai.yaml	MATCH_CODE_SEARCH	27a9683545e16ca035f94f0361d1bf91ef087eb0	105	AarnavBaddam/skills	27a9683545e16ca035f94f0361d1bf91ef087eb0	microfrontends/agents/openai.yaml
 ai-agent-large-project-engineering-skills/microfrontends/references/configuration.md	MATCH	8ef1cf6001dcae2ec33c34e8d0b4886d23cdf9f3	7270	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/microfrontends/references/configuration.md
 ai-agent-large-project-engineering-skills/microfrontends/references/local-development.md	MATCH	d19bd00f72602a708cfca9d014c36a8ff55e2cc3	5861	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/microfrontends/references/local-development.md
 ai-agent-large-project-engineering-skills/microfrontends/references/managing-microfrontends.md	MATCH	7b6e184f4a7d2ef538f68f4596c01a524b589fb1	7608	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/microfrontends/references/managing-microfrontends.md
 ai-agent-large-project-engineering-skills/microfrontends/references/path-routing.md	MATCH	3ebbd24ef8152de53b34b70d5f11e3fb75c5f786	6140	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/microfrontends/references/path-routing.md
 ai-agent-large-project-engineering-skills/microfrontends/references/security.md	MATCH	4363a1a8fe678f46514998da50b7dbb61628fa4c	4189	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/microfrontends/references/security.md
 ai-agent-large-project-engineering-skills/microfrontends/references/troubleshooting.md	MATCH	327e772549a66043d4ab375958a89dfbb81a5d98	8202	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/microfrontends/references/troubleshooting.md
-ai-agent-large-project-engineering-skills/ncc/SKILL.md	UNMATCHED	fe4a1fabdec7ee8636825aa99e1711ae5304d622	4513			
-ai-agent-large-project-engineering-skills/ncc/agents/openai.yaml	UNMATCHED	11cb6a9957a84405cc428aeaa3d14fc0298a1b1e	169			
-ai-agent-large-project-engineering-skills/next-forge/SKILL.md	UNMATCHED	7f39a7d77077eb7b43e93fef4543f190c47aaebc	7514			
-ai-agent-large-project-engineering-skills/next-forge/agents/openai.yaml	UNMATCHED	faeaa7d834d092926aa88a3ed4ffe2731086899e	154			
+ai-agent-large-project-engineering-skills/ncc/SKILL.md	MATCH_CODE_SEARCH	fe4a1fabdec7ee8636825aa99e1711ae5304d622	4513	AarnavBaddam/skills	fe4a1fabdec7ee8636825aa99e1711ae5304d622	ncc/SKILL.md
+ai-agent-large-project-engineering-skills/ncc/agents/openai.yaml	MATCH_CODE_SEARCH	11cb6a9957a84405cc428aeaa3d14fc0298a1b1e	169	AarnavBaddam/skills	11cb6a9957a84405cc428aeaa3d14fc0298a1b1e	ncc/agents/openai.yaml
+ai-agent-large-project-engineering-skills/next-forge/SKILL.md	MATCH_CODE_SEARCH	7f39a7d77077eb7b43e93fef4543f190c47aaebc	7514	AarnavBaddam/skills	7f39a7d77077eb7b43e93fef4543f190c47aaebc	next-forge/SKILL.md
+ai-agent-large-project-engineering-skills/next-forge/agents/openai.yaml	MATCH_CODE_SEARCH	faeaa7d834d092926aa88a3ed4ffe2731086899e	154	AarnavBaddam/skills	faeaa7d834d092926aa88a3ed4ffe2731086899e	next-forge/agents/openai.yaml
 ai-agent-large-project-engineering-skills/next-forge/references/architecture.md	MATCH	0f6af1cdc8f4652e3760381a60083565d475ca86	5361	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/next-forge/references/architecture.md
 ai-agent-large-project-engineering-skills/next-forge/references/customization.md	MATCH	24a8b44b242d36453344e7a82534d5bbc324cacd	6986	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/next-forge/references/customization.md
 ai-agent-large-project-engineering-skills/next-forge/references/packages.md	MATCH	35c47e513c6aeff60cab4ebe86ab292f570147a5	8556	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/next-forge/references/packages.md
 ai-agent-large-project-engineering-skills/next-forge/references/setup.md	MATCH	7b0396a4dc8209c753e2bc718537871b4aee6a26	4317	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/next-forge/references/setup.md
-ai-agent-large-project-engineering-skills/next-upgrade/SKILL.md	UNMATCHED	6ee8b1fa64654f7acb95c2bc70c355db546c40b0	2929			
-ai-agent-large-project-engineering-skills/next-upgrade/agents/openai.yaml	UNMATCHED	23b88346e8c4050e13f3b728c04b6c638aa3af66	120			
-ai-agent-large-project-engineering-skills/turbopack/SKILL.md	UNMATCHED	fdc39f3efefbc289c4bcc06aa0ae7781873ebb03	9933			
-ai-agent-large-project-engineering-skills/turbopack/agents/openai.yaml	UNMATCHED	ea8e2b6ef36feb3e2dad6b1d6da83a3efbe9b187	88			
-ai-agent-large-project-engineering-skills/turborepo/SKILL.md	UNMATCHED	5e64535405810cfb63a0c9fda5d56dbe9af4e837	16867			
-ai-agent-large-project-engineering-skills/turborepo/agents/openai.yaml	UNMATCHED	16c9e8eaf9983b188692d155322d1dbea4ad2447	88			
-ai-agent-large-project-engineering-skills/vercel-services/SKILL.md	UNMATCHED	2543baf78e51476bd22873272cc1979121542e74	7465			
-ai-agent-large-project-engineering-skills/vercel-services/agents/openai.yaml	UNMATCHED	99b53ca47fbdf0d5bccee0b1f14106397ae15dac	144			
-ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/backend/pyproject.toml	UNMATCHED	5966a7ed72def7ff4f0f14a87b5f1aaa8bab7ff7	165			
-ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/frontend/package.json	UNMATCHED	067680b026c390fba8e55c7736d136ee8d4d21a8	320			
-ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/frontend/vite.config.ts	UNMATCHED	9ffcc675746194c4a34eb43404d15db40b810265	133			
-ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/vercel.json	UNMATCHED	810abb308bc9d7a64fd67c201a8931024451df52	208			
-ai-agent-production-saas-skills/cdn-caching/SKILL.md	UNMATCHED	88f5152dbe1f8808ec340d4afdb45048be77f11c	18904			
-ai-agent-production-saas-skills/cdn-caching/agents/openai.yaml	UNMATCHED	02ec920410c7f1fc0dc9538fd0d3e776bc543f7c	119			
-ai-agent-production-saas-skills/cron-jobs/SKILL.md	UNMATCHED	cfd82cef5c4418bb170529e896b32195c919aa93	2093			
-ai-agent-production-saas-skills/cron-jobs/agents/openai.yaml	UNMATCHED	64406e11bb19349e6561f20fa7057ccf432281c0	112			
-ai-agent-production-saas-skills/email/SKILL.md	UNMATCHED	7bfb67831a4f7bddbe6d7496de7c905f7b9faaf1	10376			
-ai-agent-production-saas-skills/email/agents/openai.yaml	UNMATCHED	7c1be09b5af98c7e22fc68e41dd0bd59f600177e	159			
-ai-agent-production-saas-skills/next-cache-components/SKILL.md	UNMATCHED	7124cbb39cf57b07db4fee074c7e5e7b0c0dee72	10324			
-ai-agent-production-saas-skills/next-cache-components/agents/openai.yaml	UNMATCHED	5ba2d72dc62ad3d97c3cc1d49c98e33dcf2030c0	129			
-ai-agent-production-saas-skills/payments/SKILL.md	UNMATCHED	70b0fce3a7ea656d7d0be73c63786ba60b786b39	10589			
-ai-agent-production-saas-skills/payments/agents/openai.yaml	UNMATCHED	119f0166fddf95a4948a26a18956c30b808040cf	174			
-ai-agent-production-saas-skills/routing-middleware/SKILL.md	UNMATCHED	f7ea2329ed7548e3e1b4f600d30330275eedba6f	9502			
-ai-agent-production-saas-skills/routing-middleware/agents/openai.yaml	UNMATCHED	79afdf239761ae36507412725ef154fbd9407bf5	182			
-ai-agent-production-saas-skills/vercel-api/SKILL.md	UNMATCHED	8031f3a800f5e10e8de87d7db32627993535c2d9	9815			
-ai-agent-production-saas-skills/vercel-api/agents/openai.yaml	UNMATCHED	ed614b82f20fe17cbbd35f18660c14f63ac7ca78	103			
-ai-agent-production-saas-skills/vercel-cli/SKILL.md	UNMATCHED	b9d68e7c1b401f1075b78696eb1251bff6bf926e	5241			
-ai-agent-production-saas-skills/vercel-cli/agents/openai.yaml	UNMATCHED	e7597b3686c362377f950c06f9424a58951aa01c	90			
+ai-agent-large-project-engineering-skills/next-upgrade/SKILL.md	MATCH_CODE_SEARCH	6ee8b1fa64654f7acb95c2bc70c355db546c40b0	2929	AarnavBaddam/skills	6ee8b1fa64654f7acb95c2bc70c355db546c40b0	next-upgrade/SKILL.md
+ai-agent-large-project-engineering-skills/next-upgrade/agents/openai.yaml	MATCH_CODE_SEARCH	23b88346e8c4050e13f3b728c04b6c638aa3af66	120	AarnavBaddam/skills	23b88346e8c4050e13f3b728c04b6c638aa3af66	next-upgrade/agents/openai.yaml
+ai-agent-large-project-engineering-skills/turbopack/SKILL.md	MATCH_CODE_SEARCH	fdc39f3efefbc289c4bcc06aa0ae7781873ebb03	9933	AarnavBaddam/skills	fdc39f3efefbc289c4bcc06aa0ae7781873ebb03	turbopack/SKILL.md
+ai-agent-large-project-engineering-skills/turbopack/agents/openai.yaml	MATCH_CODE_SEARCH	ea8e2b6ef36feb3e2dad6b1d6da83a3efbe9b187	88	AarnavBaddam/skills	ea8e2b6ef36feb3e2dad6b1d6da83a3efbe9b187	turbopack/agents/openai.yaml
+ai-agent-large-project-engineering-skills/turborepo/SKILL.md	MATCH_CODE_SEARCH	5e64535405810cfb63a0c9fda5d56dbe9af4e837	16867	AarnavBaddam/skills	5e64535405810cfb63a0c9fda5d56dbe9af4e837	turborepo/SKILL.md
+ai-agent-large-project-engineering-skills/turborepo/agents/openai.yaml	MATCH_CODE_SEARCH	16c9e8eaf9983b188692d155322d1dbea4ad2447	88	AarnavBaddam/skills	16c9e8eaf9983b188692d155322d1dbea4ad2447	turborepo/agents/openai.yaml
+ai-agent-large-project-engineering-skills/vercel-services/SKILL.md	MATCH_CODE_SEARCH	2543baf78e51476bd22873272cc1979121542e74	7465	AarnavBaddam/skills	2543baf78e51476bd22873272cc1979121542e74	vercel-services/SKILL.md
+ai-agent-large-project-engineering-skills/vercel-services/agents/openai.yaml	MATCH_CODE_SEARCH	99b53ca47fbdf0d5bccee0b1f14106397ae15dac	144	AarnavBaddam/skills	99b53ca47fbdf0d5bccee0b1f14106397ae15dac	vercel-services/agents/openai.yaml
+ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/backend/pyproject.toml	MATCH_CODE_SEARCH	5966a7ed72def7ff4f0f14a87b5f1aaa8bab7ff7	165	AarnavBaddam/skills	5966a7ed72def7ff4f0f14a87b5f1aaa8bab7ff7	vercel-services/references/fastapi-vite/backend/pyproject.toml
+ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/frontend/package.json	MATCH_CODE_SEARCH	067680b026c390fba8e55c7736d136ee8d4d21a8	320	AarnavBaddam/skills	067680b026c390fba8e55c7736d136ee8d4d21a8	vercel-services/references/fastapi-vite/frontend/package.json
+ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/frontend/vite.config.ts	MATCH_CODE_SEARCH	9ffcc675746194c4a34eb43404d15db40b810265	133	AarnavBaddam/skills	9ffcc675746194c4a34eb43404d15db40b810265	vercel-services/references/fastapi-vite/frontend/vite.config.ts
+ai-agent-large-project-engineering-skills/vercel-services/references/fastapi-vite/vercel.json	MATCH_CODE_SEARCH	810abb308bc9d7a64fd67c201a8931024451df52	208	AarnavBaddam/skills	810abb308bc9d7a64fd67c201a8931024451df52	vercel-services/references/fastapi-vite/vercel.json
+ai-agent-production-saas-skills/cdn-caching/SKILL.md	MATCH_CODE_SEARCH	88f5152dbe1f8808ec340d4afdb45048be77f11c	18904	AarnavBaddam/skills	88f5152dbe1f8808ec340d4afdb45048be77f11c	cdn-caching/SKILL.md
+ai-agent-production-saas-skills/cdn-caching/agents/openai.yaml	MATCH_CODE_SEARCH	02ec920410c7f1fc0dc9538fd0d3e776bc543f7c	119	AarnavBaddam/skills	02ec920410c7f1fc0dc9538fd0d3e776bc543f7c	cdn-caching/agents/openai.yaml
+ai-agent-production-saas-skills/cron-jobs/SKILL.md	MATCH_CODE_SEARCH	cfd82cef5c4418bb170529e896b32195c919aa93	2093	AarnavBaddam/skills	cfd82cef5c4418bb170529e896b32195c919aa93	cron-jobs/SKILL.md
+ai-agent-production-saas-skills/cron-jobs/agents/openai.yaml	MATCH_CODE_SEARCH	64406e11bb19349e6561f20fa7057ccf432281c0	112	AarnavBaddam/skills	64406e11bb19349e6561f20fa7057ccf432281c0	cron-jobs/agents/openai.yaml
+ai-agent-production-saas-skills/email/SKILL.md	MATCH_CODE_SEARCH	7bfb67831a4f7bddbe6d7496de7c905f7b9faaf1	10376	AarnavBaddam/skills	7bfb67831a4f7bddbe6d7496de7c905f7b9faaf1	email/SKILL.md
+ai-agent-production-saas-skills/email/agents/openai.yaml	MATCH_CODE_SEARCH	7c1be09b5af98c7e22fc68e41dd0bd59f600177e	159	AarnavBaddam/skills	7c1be09b5af98c7e22fc68e41dd0bd59f600177e	email/agents/openai.yaml
+ai-agent-production-saas-skills/next-cache-components/SKILL.md	MATCH_CODE_SEARCH	7124cbb39cf57b07db4fee074c7e5e7b0c0dee72	10324	AarnavBaddam/skills	7124cbb39cf57b07db4fee074c7e5e7b0c0dee72	next-cache-components/SKILL.md
+ai-agent-production-saas-skills/next-cache-components/agents/openai.yaml	MATCH_CODE_SEARCH	5ba2d72dc62ad3d97c3cc1d49c98e33dcf2030c0	129	AarnavBaddam/skills	5ba2d72dc62ad3d97c3cc1d49c98e33dcf2030c0	next-cache-components/agents/openai.yaml
+ai-agent-production-saas-skills/payments/SKILL.md	MATCH_CODE_SEARCH	70b0fce3a7ea656d7d0be73c63786ba60b786b39	10589	AarnavBaddam/skills	70b0fce3a7ea656d7d0be73c63786ba60b786b39	payments/SKILL.md
+ai-agent-production-saas-skills/payments/agents/openai.yaml	MATCH_CODE_SEARCH	119f0166fddf95a4948a26a18956c30b808040cf	174	AarnavBaddam/skills	119f0166fddf95a4948a26a18956c30b808040cf	payments/agents/openai.yaml
+ai-agent-production-saas-skills/routing-middleware/SKILL.md	MATCH_CODE_SEARCH	f7ea2329ed7548e3e1b4f600d30330275eedba6f	9502	AarnavBaddam/skills	f7ea2329ed7548e3e1b4f600d30330275eedba6f	routing-middleware/SKILL.md
+ai-agent-production-saas-skills/routing-middleware/agents/openai.yaml	MATCH_CODE_SEARCH	79afdf239761ae36507412725ef154fbd9407bf5	182	AarnavBaddam/skills	79afdf239761ae36507412725ef154fbd9407bf5	routing-middleware/agents/openai.yaml
+ai-agent-production-saas-skills/vercel-api/SKILL.md	MATCH_CODE_SEARCH	8031f3a800f5e10e8de87d7db32627993535c2d9	9815	AarnavBaddam/skills	8031f3a800f5e10e8de87d7db32627993535c2d9	vercel-api/SKILL.md
+ai-agent-production-saas-skills/vercel-api/agents/openai.yaml	MATCH_CODE_SEARCH	ed614b82f20fe17cbbd35f18660c14f63ac7ca78	103	AarnavBaddam/skills	ed614b82f20fe17cbbd35f18660c14f63ac7ca78	vercel-api/agents/openai.yaml
+ai-agent-production-saas-skills/vercel-cli/SKILL.md	MATCH_CODE_SEARCH	b9d68e7c1b401f1075b78696eb1251bff6bf926e	5241	AarnavBaddam/skills	b9d68e7c1b401f1075b78696eb1251bff6bf926e	vercel-cli/SKILL.md
+ai-agent-production-saas-skills/vercel-cli/agents/openai.yaml	MATCH_CODE_SEARCH	e7597b3686c362377f950c06f9424a58951aa01c	90	AarnavBaddam/skills	e7597b3686c362377f950c06f9424a58951aa01c	vercel-cli/agents/openai.yaml
 ai-agent-production-saas-skills/vercel-cli/references/advanced.md	MATCH	5e29babb5b2ae97a9cd8e307d6e9e93afeb024b5	882	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/vercel-cli/references/advanced.md
 ai-agent-production-saas-skills/vercel-cli/references/bun.md	MATCH	84a5d08416a09a4d5581a99c83cba6bb49f38899	1195	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/vercel-cli/references/bun.md
 ai-agent-production-saas-skills/vercel-cli/references/ci-automation.md	MATCH	cca28bf51f30222e8f328cb93a02181c0998c7bd	1537	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/vercel-cli/references/ci-automation.md
@@ -343,30 +343,30 @@ ai-agent-production-saas-skills/vercel-cli/references/monorepos.md	MATCH	6e8b561
 ai-agent-production-saas-skills/vercel-cli/references/node-backends.md	MATCH	ebf13699686e23495e5ac87274a38ec2742b9f3e	2719	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/vercel-cli/references/node-backends.md
 ai-agent-production-saas-skills/vercel-cli/references/projects-and-teams.md	MATCH	d18ff6666b5ad4cc670ee006ccaddd0e1c0c7c77	1068	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/vercel-cli/references/projects-and-teams.md
 ai-agent-production-saas-skills/vercel-cli/references/storage.md	MATCH	dec954532805a98dd9b94fa6ab50b5722a5ac77d	821	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/vercel-cli/references/storage.md
-ai-agent-production-saas-skills/vercel-firewall/SKILL.md	UNMATCHED	82ad2ab276c306c66b341ed125b9679ba0995d84	20060			
-ai-agent-production-saas-skills/vercel-firewall/agents/openai.yaml	UNMATCHED	74144834328a70d72cc7a7d6da7b1543483c7ed7	113			
-ai-agent-production-saas-skills/vercel-flags/SKILL.md	UNMATCHED	f8b961fa86e1bfd0f442485697c6453043b43286	10354			
-ai-agent-production-saas-skills/vercel-flags/agents/openai.yaml	UNMATCHED	874fa5c9985ef333745cc31834475d109954609a	178			
-ai-agent-ui-product-skills/cms/SKILL.md	UNMATCHED	ed116f80355c6657435f028a2dd6d424491c42ee	10530			
-ai-agent-ui-product-skills/cms/agents/openai.yaml	UNMATCHED	9f0468c6195d8b7bb9ef6216822aeb5e478a11d4	169			
-ai-agent-ui-product-skills/geist/SKILL.md	UNMATCHED	67d6ddae6c77605951791e5b9205d1295b3dedde	6896			
-ai-agent-ui-product-skills/geist/agents/openai.yaml	UNMATCHED	7f46849ab306a56d7d138527cf1ccd1518a2918c	167			
-ai-agent-ui-product-skills/satori/SKILL.md	UNMATCHED	0be7e83fc76e6941de0d212608e830266d071652	7321			
-ai-agent-ui-product-skills/satori/agents/openai.yaml	UNMATCHED	baa774e616aa143ee0b4b3816caa6d7d9c71fd38	171			
-ai-agent-ui-product-skills/shadcn/SKILL.md	UNMATCHED	68edd737d48c3519876405056a24caf32e2d8385	19533			
-ai-agent-ui-product-skills/shadcn/agents/openai.yaml	UNMATCHED	99c6b8738dc47bd7f4ef0f5d21c8d6967842416a	171			
-ai-agent-ui-product-skills/swr/SKILL.md	UNMATCHED	c1725c94fb536207100b395a11f440886ee8b315	5774			
-ai-agent-ui-product-skills/swr/agents/openai.yaml	UNMATCHED	c79c217442d2d5bc74d6d3f903a8073a8ecf142e	90			
-ai-agent-ui-product-skills/v0-dev/SKILL.md	UNMATCHED	5ebe0b83edc96da8620357fc59f707825270077e	14603			
-ai-agent-ui-product-skills/v0-dev/agents/openai.yaml	UNMATCHED	01f59359aaa1f2f879aa542083ad0649df774009	88			
-ai-agent-web-engineering-skills/agent-browser-verify/SKILL.md	UNMATCHED	431ade2159d9f093ac4dfec18438b8a9283e6372	6563			
-ai-agent-web-engineering-skills/agent-browser-verify/agents/openai.yaml	UNMATCHED	d9142bb4e5d6c0aa9fb45b7307bfdf96793a5004	120			
-ai-agent-web-engineering-skills/auth/SKILL.md	UNMATCHED	33d51411b356561d75afdd6622fa0f2a4717d780	9387			
-ai-agent-web-engineering-skills/auth/agents/openai.yaml	UNMATCHED	76b9d610a1d1c1be54584f8f57741767e95b9172	170			
-ai-agent-web-engineering-skills/env-vars/SKILL.md	UNMATCHED	4d5d5028d97323d6dec786b932edbc4b387045a7	9161			
-ai-agent-web-engineering-skills/env-vars/agents/openai.yaml	UNMATCHED	71d204f2bbd80e599c75acd64deb6726c146fda9	105			
-ai-agent-web-engineering-skills/nextjs/SKILL.md	UNMATCHED	ab252649c550cd34a5fac7e7a03d5c9f0a796767	5328			
-ai-agent-web-engineering-skills/nextjs/agents/openai.yaml	UNMATCHED	1ae7f7f34e20635c6bb557ef8934b599d7716ed0	95			
+ai-agent-production-saas-skills/vercel-firewall/SKILL.md	MATCH_CODE_SEARCH	82ad2ab276c306c66b341ed125b9679ba0995d84	20060	AarnavBaddam/skills	82ad2ab276c306c66b341ed125b9679ba0995d84	vercel-firewall/SKILL.md
+ai-agent-production-saas-skills/vercel-firewall/agents/openai.yaml	MATCH_CODE_SEARCH	74144834328a70d72cc7a7d6da7b1543483c7ed7	113	AarnavBaddam/skills	74144834328a70d72cc7a7d6da7b1543483c7ed7	vercel-firewall/agents/openai.yaml
+ai-agent-production-saas-skills/vercel-flags/SKILL.md	MATCH_CODE_SEARCH	f8b961fa86e1bfd0f442485697c6453043b43286	10354	AarnavBaddam/skills	f8b961fa86e1bfd0f442485697c6453043b43286	vercel-flags/SKILL.md
+ai-agent-production-saas-skills/vercel-flags/agents/openai.yaml	MATCH_CODE_SEARCH	874fa5c9985ef333745cc31834475d109954609a	178	AarnavBaddam/skills	874fa5c9985ef333745cc31834475d109954609a	vercel-flags/agents/openai.yaml
+ai-agent-ui-product-skills/cms/SKILL.md	MATCH_CODE_SEARCH	ed116f80355c6657435f028a2dd6d424491c42ee	10530	AarnavBaddam/skills	ed116f80355c6657435f028a2dd6d424491c42ee	cms/SKILL.md
+ai-agent-ui-product-skills/cms/agents/openai.yaml	MATCH_CODE_SEARCH	9f0468c6195d8b7bb9ef6216822aeb5e478a11d4	169	AarnavBaddam/skills	9f0468c6195d8b7bb9ef6216822aeb5e478a11d4	cms/agents/openai.yaml
+ai-agent-ui-product-skills/geist/SKILL.md	MATCH_CODE_SEARCH	67d6ddae6c77605951791e5b9205d1295b3dedde	6896	AarnavBaddam/skills	67d6ddae6c77605951791e5b9205d1295b3dedde	geist/SKILL.md
+ai-agent-ui-product-skills/geist/agents/openai.yaml	MATCH_CODE_SEARCH	7f46849ab306a56d7d138527cf1ccd1518a2918c	167	AarnavBaddam/skills	7f46849ab306a56d7d138527cf1ccd1518a2918c	geist/agents/openai.yaml
+ai-agent-ui-product-skills/satori/SKILL.md	MATCH_CODE_SEARCH	0be7e83fc76e6941de0d212608e830266d071652	7321	AarnavBaddam/skills	0be7e83fc76e6941de0d212608e830266d071652	satori/SKILL.md
+ai-agent-ui-product-skills/satori/agents/openai.yaml	MATCH_CODE_SEARCH	baa774e616aa143ee0b4b3816caa6d7d9c71fd38	171	AarnavBaddam/skills	baa774e616aa143ee0b4b3816caa6d7d9c71fd38	satori/agents/openai.yaml
+ai-agent-ui-product-skills/shadcn/SKILL.md	MATCH_CODE_SEARCH	68edd737d48c3519876405056a24caf32e2d8385	19533	AarnavBaddam/skills	68edd737d48c3519876405056a24caf32e2d8385	shadcn/SKILL.md
+ai-agent-ui-product-skills/shadcn/agents/openai.yaml	MATCH_CODE_SEARCH	99c6b8738dc47bd7f4ef0f5d21c8d6967842416a	171	AarnavBaddam/skills	99c6b8738dc47bd7f4ef0f5d21c8d6967842416a	shadcn/agents/openai.yaml
+ai-agent-ui-product-skills/swr/SKILL.md	MATCH_CODE_SEARCH	c1725c94fb536207100b395a11f440886ee8b315	5774	AarnavBaddam/skills	c1725c94fb536207100b395a11f440886ee8b315	swr/SKILL.md
+ai-agent-ui-product-skills/swr/agents/openai.yaml	MATCH_CODE_SEARCH	c79c217442d2d5bc74d6d3f903a8073a8ecf142e	90	AarnavBaddam/skills	c79c217442d2d5bc74d6d3f903a8073a8ecf142e	swr/agents/openai.yaml
+ai-agent-ui-product-skills/v0-dev/SKILL.md	MATCH_CODE_SEARCH	5ebe0b83edc96da8620357fc59f707825270077e	14603	AarnavBaddam/skills	5ebe0b83edc96da8620357fc59f707825270077e	v0-dev/SKILL.md
+ai-agent-ui-product-skills/v0-dev/agents/openai.yaml	MATCH_CODE_SEARCH	01f59359aaa1f2f879aa542083ad0649df774009	88	AarnavBaddam/skills	01f59359aaa1f2f879aa542083ad0649df774009	v0-dev/agents/openai.yaml
+ai-agent-web-engineering-skills/agent-browser-verify/SKILL.md	MATCH_CODE_SEARCH	431ade2159d9f093ac4dfec18438b8a9283e6372	6563	AarnavBaddam/skills	431ade2159d9f093ac4dfec18438b8a9283e6372	agent-browser-verify/SKILL.md
+ai-agent-web-engineering-skills/agent-browser-verify/agents/openai.yaml	MATCH_CODE_SEARCH	d9142bb4e5d6c0aa9fb45b7307bfdf96793a5004	120	AarnavBaddam/skills	d9142bb4e5d6c0aa9fb45b7307bfdf96793a5004	agent-browser-verify/agents/openai.yaml
+ai-agent-web-engineering-skills/auth/SKILL.md	MATCH_CODE_SEARCH	33d51411b356561d75afdd6622fa0f2a4717d780	9387	AarnavBaddam/skills	33d51411b356561d75afdd6622fa0f2a4717d780	auth/SKILL.md
+ai-agent-web-engineering-skills/auth/agents/openai.yaml	MATCH_CODE_SEARCH	76b9d610a1d1c1be54584f8f57741767e95b9172	170	AarnavBaddam/skills	76b9d610a1d1c1be54584f8f57741767e95b9172	auth/agents/openai.yaml
+ai-agent-web-engineering-skills/env-vars/SKILL.md	MATCH_CODE_SEARCH	4d5d5028d97323d6dec786b932edbc4b387045a7	9161	AarnavBaddam/skills	4d5d5028d97323d6dec786b932edbc4b387045a7	env-vars/SKILL.md
+ai-agent-web-engineering-skills/env-vars/agents/openai.yaml	MATCH_CODE_SEARCH	71d204f2bbd80e599c75acd64deb6726c146fda9	105	AarnavBaddam/skills	71d204f2bbd80e599c75acd64deb6726c146fda9	env-vars/agents/openai.yaml
+ai-agent-web-engineering-skills/nextjs/SKILL.md	MATCH_CODE_SEARCH	ab252649c550cd34a5fac7e7a03d5c9f0a796767	5328	AarnavBaddam/skills	ab252649c550cd34a5fac7e7a03d5c9f0a796767	nextjs/SKILL.md
+ai-agent-web-engineering-skills/nextjs/agents/openai.yaml	MATCH_CODE_SEARCH	1ae7f7f34e20635c6bb557ef8934b599d7716ed0	95	AarnavBaddam/skills	1ae7f7f34e20635c6bb557ef8934b599d7716ed0	nextjs/agents/openai.yaml
 ai-agent-web-engineering-skills/nextjs/references/app-router-files.md	MATCH	006193259373b57340df9c7f5a3118264e7149b0	2610	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/nextjs/references/app-router-files.md
 ai-agent-web-engineering-skills/nextjs/references/async-patterns.md	MATCH	dce8d8ccf3f10195f3be5c233571f85443d54828	1664	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/nextjs/references/async-patterns.md
 ai-agent-web-engineering-skills/nextjs/references/bundling.md	MATCH	ac5e814c1d3738b818c317c4648f67bfbb454fe7	4456	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/nextjs/references/bundling.md
@@ -387,8 +387,8 @@ ai-agent-web-engineering-skills/nextjs/references/runtime-selection.md	MATCH	cec
 ai-agent-web-engineering-skills/nextjs/references/scripts.md	MATCH	4eeb744c84852c285b8bc4ee35abad3083afc0c3	3326	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/nextjs/references/scripts.md
 ai-agent-web-engineering-skills/nextjs/references/self-hosting.md	MATCH	4b3966adf5168af92414fa63377dcc66b5233f48	8334	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/nextjs/references/self-hosting.md
 ai-agent-web-engineering-skills/nextjs/references/suspense-boundaries.md	MATCH	5134fa4d909310f10a5ba348d3d746467cb03406	1366	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/nextjs/references/suspense-boundaries.md
-ai-agent-web-engineering-skills/observability/SKILL.md	UNMATCHED	39653194f418bab7fb0016f404b2720020d8f706	26510			
-ai-agent-web-engineering-skills/observability/agents/openai.yaml	UNMATCHED	10affb2cd1db6e34eba5e1cbdfe5385582266c31	179			
+ai-agent-web-engineering-skills/observability/SKILL.md	MATCH_CODE_SEARCH	39653194f418bab7fb0016f404b2720020d8f706	26510	AarnavBaddam/skills	39653194f418bab7fb0016f404b2720020d8f706	observability/SKILL.md
+ai-agent-web-engineering-skills/observability/agents/openai.yaml	MATCH_CODE_SEARCH	10affb2cd1db6e34eba5e1cbdfe5385582266c31	179	AarnavBaddam/skills	10affb2cd1db6e34eba5e1cbdfe5385582266c31	observability/agents/openai.yaml
 ai-agent-web-engineering-skills/react-best-practices/AGENTS.md	MATCH	a194a6183eab0af30f6b2752cbe80c31b5ff35c2	94496	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/react-best-practices/AGENTS.md
 ai-agent-web-engineering-skills/react-best-practices/SKILL.md	UNMATCHED	81fe1d20116691c369aa1dc2425999407d34e806	6951			
 ai-agent-web-engineering-skills/react-best-practices/agents/openai.yaml	UNMATCHED	98a2d7ecfeb79746ea4a8e848488dc50f1cd5a35	117			
@@ -458,8 +458,8 @@ ai-agent-web-engineering-skills/react-best-practices/rules/server-dedup-props.md
 ai-agent-web-engineering-skills/react-best-practices/rules/server-hoist-static-io.md	MATCH	5b642b69bcb84b3c9cd845a2af892d19396446e0	4393	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/react-best-practices/rules/server-hoist-static-io.md
 ai-agent-web-engineering-skills/react-best-practices/rules/server-parallel-fetching.md	MATCH	1affc835a601a894fd02de08e6c9cdfd76d34b64	1554	vercel-agent-skills	7c180d9044c9ae2b442b567aad4e42a28dd5ed62	skills/react-best-practices/rules/server-parallel-fetching.md
 ai-agent-web-engineering-skills/react-best-practices/rules/server-serialization.md	MATCH	39c5c4164c31be7f171ea2f4b3b32fe47709a651	996	vercel-agent-skills	7c180d9044c9ae2b442b567aad4e42a28dd5ed62	skills/react-best-practices/rules/server-serialization.md
-ai-agent-web-engineering-skills/supabase-postgres-best-practices/CHANGELOG.md	UNMATCHED	94aee4878183c77a9152c94f1e2a5fd573b91f91	2036			
-ai-agent-web-engineering-skills/supabase-postgres-best-practices/SKILL.md	UNMATCHED	d9ef1949f807d0b41ca85d9a0837ad78bf1c58de	2576			
+ai-agent-web-engineering-skills/supabase-postgres-best-practices/CHANGELOG.md	MATCH_CODE_SEARCH	94aee4878183c77a9152c94f1e2a5fd573b91f91	2036	Thedougler/agent-skills	94aee4878183c77a9152c94f1e2a5fd573b91f91	supabase-postgres-best-practices/CHANGELOG.md
+ai-agent-web-engineering-skills/supabase-postgres-best-practices/SKILL.md	MATCH_CODE_SEARCH	d9ef1949f807d0b41ca85d9a0837ad78bf1c58de	2576	kintsugi-programmer/kintsugi-ai-agent-skills	d9ef1949f807d0b41ca85d9a0837ad78bf1c58de	supabase-postgres-best-practices/SKILL.md
 ai-agent-web-engineering-skills/supabase-postgres-best-practices/references/_contributing.md	MATCH	1c055aff9ad2bf12cfe7edc0002f2f77fe6980d2	4113	supabase-agent-skills	1207767388a0ffb55f21fb4e6988fee96942431d	skills/supabase-postgres-best-practices/references/_contributing.md
 ai-agent-web-engineering-skills/supabase-postgres-best-practices/references/_sections.md	MATCH	8ba57c23e8119e411fcc8a230cda08e695792cac	1682	supabase-agent-skills	1207767388a0ffb55f21fb4e6988fee96942431d	skills/supabase-postgres-best-practices/references/_sections.md
 ai-agent-web-engineering-skills/supabase-postgres-best-practices/references/_template.md	MATCH	91ace90e10a4d8ef354a82bb1994842e6979ebed	1040	supabase-agent-skills	1207767388a0ffb55f21fb4e6988fee96942431d	skills/supabase-postgres-best-practices/references/_template.md
@@ -494,49 +494,49 @@ ai-agent-web-engineering-skills/supabase-postgres-best-practices/references/sche
 ai-agent-web-engineering-skills/supabase-postgres-best-practices/references/security-privileges.md	MATCH	448ec345fab6c5a0116c584d65638b86d758c558	1566	supabase-agent-skills	1207767388a0ffb55f21fb4e6988fee96942431d	skills/supabase-postgres-best-practices/references/security-privileges.md
 ai-agent-web-engineering-skills/supabase-postgres-best-practices/references/security-rls-basics.md	MATCH	c61e1a8503de113be0981759b82f5e37090f344c	1372	supabase-agent-skills	1207767388a0ffb55f21fb4e6988fee96942431d	skills/supabase-postgres-best-practices/references/security-rls-basics.md
 ai-agent-web-engineering-skills/supabase-postgres-best-practices/references/security-rls-performance.md	MATCH	c3c7c416d57d9a46a9993f4e0c20f772fb64483d	2103	supabase-agent-skills	1207767388a0ffb55f21fb4e6988fee96942431d	skills/supabase-postgres-best-practices/references/security-rls-performance.md
-ai-agent-web-engineering-skills/vercel-functions/SKILL.md	UNMATCHED	b150795e800b65cd4a415b385c8c30f2564d0396	14367			
-ai-agent-web-engineering-skills/vercel-functions/agents/openai.yaml	UNMATCHED	c25407c767a38224e05a1ea74e0c41fbbec84a6d	182			
+ai-agent-web-engineering-skills/vercel-functions/SKILL.md	MATCH_CODE_SEARCH	b150795e800b65cd4a415b385c8c30f2564d0396	14367	AarnavBaddam/skills	b150795e800b65cd4a415b385c8c30f2564d0396	vercel-functions/SKILL.md
+ai-agent-web-engineering-skills/vercel-functions/agents/openai.yaml	MATCH_CODE_SEARCH	c25407c767a38224e05a1ea74e0c41fbbec84a6d	182	AarnavBaddam/skills	c25407c767a38224e05a1ea74e0c41fbbec84a6d	vercel-functions/agents/openai.yaml
 local-github-agentic-loop-pack/PACK-GUIDE.md	UNMATCHED	92df2432707db5293c9f116b3e7ba579cf7045ca	3271			
-local-github-agentic-loop-pack/skills/ai-generation-persistence/SKILL.md	UNMATCHED	a67a336de78ebde08caf06c206d9b609b4314b0a	7749			
-local-github-agentic-loop-pack/skills/ai-generation-persistence/agents/openai.yaml	UNMATCHED	f263ea73b301505d9fead3e408a97cd2d9b5c932	190			
-local-github-agentic-loop-pack/skills/ai-sdk/SKILL.md	UNMATCHED	8bd26672f498a0fdae9b5edd2c87e7c2a89eedc3	6366			
-local-github-agentic-loop-pack/skills/ai-sdk/agents/openai.yaml	UNMATCHED	584a1e2f151dd5f7bf758ec9be0565bf05f45760	89			
+local-github-agentic-loop-pack/skills/ai-generation-persistence/SKILL.md	MATCH_CODE_SEARCH	a67a336de78ebde08caf06c206d9b609b4314b0a	7749	AarnavBaddam/skills	a67a336de78ebde08caf06c206d9b609b4314b0a	ai-generation-persistence/SKILL.md
+local-github-agentic-loop-pack/skills/ai-generation-persistence/agents/openai.yaml	MATCH_CODE_SEARCH	f263ea73b301505d9fead3e408a97cd2d9b5c932	190	AarnavBaddam/skills	f263ea73b301505d9fead3e408a97cd2d9b5c932	ai-generation-persistence/agents/openai.yaml
+local-github-agentic-loop-pack/skills/ai-sdk/SKILL.md	MATCH_CODE_SEARCH	8bd26672f498a0fdae9b5edd2c87e7c2a89eedc3	6366	AarnavBaddam/skills	8bd26672f498a0fdae9b5edd2c87e7c2a89eedc3	ai-sdk/SKILL.md
+local-github-agentic-loop-pack/skills/ai-sdk/agents/openai.yaml	MATCH_CODE_SEARCH	584a1e2f151dd5f7bf758ec9be0565bf05f45760	89	AarnavBaddam/skills	584a1e2f151dd5f7bf758ec9be0565bf05f45760	ai-sdk/agents/openai.yaml
 local-github-agentic-loop-pack/skills/ai-sdk/references/ai-gateway.md	MATCH	8bb2d66ff45d193e8dd4f8144d51c15db8c80dcf	2191	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/ai-gateway.md
 local-github-agentic-loop-pack/skills/ai-sdk/references/common-errors.md	MATCH	529521ebec8f31164bbaf3e1c744c60c8ea3f4c0	11034	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/common-errors.md
 local-github-agentic-loop-pack/skills/ai-sdk/references/devtools.md	MATCH	197e203ad4ffad88743b1a5dda4910fdb5475728	1199	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/devtools.md
 local-github-agentic-loop-pack/skills/ai-sdk/references/providers.md	MATCH	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	0	anthropic-skills	b29e7cf65e5cb78a5ac33d582270551bc74a14eb	skills/pptx/scripts/__init__.py
 local-github-agentic-loop-pack/skills/ai-sdk/references/type-safe-agents.md	MATCH	17d7a6fdc5edcda9cd39c87f4f80f686c9fea29e	5323	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/type-safe-agents.md
-local-github-agentic-loop-pack/skills/answers-ask-user-input/SKILL.md	UNMATCHED	9727d2ed00b1b221393972bb538ee5667a25234f	4749			
+local-github-agentic-loop-pack/skills/answers-ask-user-input/SKILL.md	MATCH_CODE_SEARCH	9727d2ed00b1b221393972bb538ee5667a25234f	4749	XiaomiMiMo/MiMo-Code	9727d2ed00b1b221393972bb538ee5667a25234f	packages/opencode/src/skill/builtin/.bundle/sales/workflows/answers-ask-user-input/SKILL.md
 local-github-agentic-loop-pack/skills/control-browser/SKILL.md	UNMATCHED	e846212247dc5e196b4c373681e5b353138d4dad	5483			
-local-github-agentic-loop-pack/skills/eve/SKILL.md	UNMATCHED	813f1d95552904e81defd00f4c72d7b76723ae2f	4654			
-local-github-agentic-loop-pack/skills/eve/agents/openai.yaml	UNMATCHED	76fa34f5dc378b97554efc5ae40d4a3461d25510	97			
+local-github-agentic-loop-pack/skills/eve/SKILL.md	MATCH_CODE_SEARCH	813f1d95552904e81defd00f4c72d7b76723ae2f	4654	AarnavBaddam/skills	813f1d95552904e81defd00f4c72d7b76723ae2f	eve/SKILL.md
+local-github-agentic-loop-pack/skills/eve/agents/openai.yaml	MATCH_CODE_SEARCH	76fa34f5dc378b97554efc5ae40d4a3461d25510	97	AarnavBaddam/skills	76fa34f5dc378b97554efc5ae40d4a3461d25510	eve/agents/openai.yaml
 local-github-agentic-loop-pack/skills/gh-address-comments/LICENSE.txt	MATCH	7a4a3ea2424c09fbe48d455aed1eaa94d9124835	11357	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/LICENSE.txt
-local-github-agentic-loop-pack/skills/gh-address-comments/SKILL.md	UNMATCHED	02eb67b1049532a697fa14fa71c09f14d5a46d5c	3536			
+local-github-agentic-loop-pack/skills/gh-address-comments/SKILL.md	MATCH_CODE_SEARCH	02eb67b1049532a697fa14fa71c09f14d5a46d5c	3536	NexWan/ai-skills	02eb67b1049532a697fa14fa71c09f14d5a46d5c	gh-address-comments/SKILL.md
 local-github-agentic-loop-pack/skills/gh-address-comments/agents/openai.yaml	MATCH	e39f3f9dfcda335fa4e6a6bc2b6debeeacfbf836	325	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/agents/openai.yaml
 local-github-agentic-loop-pack/skills/gh-address-comments/assets/github-small.svg	MATCH	828e9d9d1d29e1a525a1aeee5eb1e4162249c77e	853	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/assets/github-small.svg
 local-github-agentic-loop-pack/skills/gh-address-comments/assets/github.png	MATCH	e23dbe59099a594c06a46081ce48b82aa409b0e7	1838	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/assets/github.png
 local-github-agentic-loop-pack/skills/gh-address-comments/scripts/fetch_comments.py	MATCH	09b9c01c50d9202bd6455ce36887e08be92ac1ae	6537	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/scripts/fetch_comments.py
 local-github-agentic-loop-pack/skills/gh-fix-ci/LICENSE.txt	MATCH	13e25df86ce06eb6488e6a6bc5c5847f5dedc352	10776	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/imagegen/LICENSE.txt
-local-github-agentic-loop-pack/skills/gh-fix-ci/SKILL.md	UNMATCHED	47c9cbaa6315aa19af53974299af8a8ea12c8dba	4326			
+local-github-agentic-loop-pack/skills/gh-fix-ci/SKILL.md	MATCH_CODE_SEARCH	47c9cbaa6315aa19af53974299af8a8ea12c8dba	4326	NexWan/ai-skills	47c9cbaa6315aa19af53974299af8a8ea12c8dba	gh-fix-ci/SKILL.md
 local-github-agentic-loop-pack/skills/gh-fix-ci/agents/openai.yaml	MATCH	83aca50fbb6aab5cc6d7d9f5497ac6c04faa8696	330	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-fix-ci/agents/openai.yaml
 local-github-agentic-loop-pack/skills/gh-fix-ci/assets/github-small.svg	MATCH	828e9d9d1d29e1a525a1aeee5eb1e4162249c77e	853	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/assets/github-small.svg
 local-github-agentic-loop-pack/skills/gh-fix-ci/assets/github.png	MATCH	e23dbe59099a594c06a46081ce48b82aa409b0e7	1838	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/assets/github.png
 local-github-agentic-loop-pack/skills/gh-fix-ci/scripts/inspect_pr_checks.py	MATCH	06cd03c5fc61c784d082e1c25a533c94e0912b3f	15222	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-fix-ci/scripts/inspect_pr_checks.py
-local-github-agentic-loop-pack/skills/github/SKILL.md	UNMATCHED	834c2b38e198d27759417ad25171da716bd77af0	4356			
+local-github-agentic-loop-pack/skills/github/SKILL.md	MATCH_CODE_SEARCH	834c2b38e198d27759417ad25171da716bd77af0	4356	Muahd1b/Skills_for_use	834c2b38e198d27759417ad25171da716bd77af0	github/github/SKILL.md
 local-github-agentic-loop-pack/skills/github/agents/openai.yaml	MATCH	bb13965e4b11ecc9c1b846f55aea85c3162d4087	318	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/github/agents/openai.yaml
 local-github-agentic-loop-pack/skills/github/assets/github-small.svg	MATCH	828e9d9d1d29e1a525a1aeee5eb1e4162249c77e	853	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/assets/github-small.svg
 local-github-agentic-loop-pack/skills/github/assets/github.png	MATCH	e23dbe59099a594c06a46081ce48b82aa409b0e7	1838	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/gh-address-comments/assets/github.png
-local-github-agentic-loop-pack/skills/investigation-mode/SKILL.md	UNMATCHED	00b8f15a8e3c3b6ddea97bef74d7f43f31654fae	9306			
-local-github-agentic-loop-pack/skills/investigation-mode/agents/openai.yaml	UNMATCHED	80569ff5e6ccc8892bf6991ec1eb12f8e9850805	106			
+local-github-agentic-loop-pack/skills/investigation-mode/SKILL.md	MATCH_CODE_SEARCH	00b8f15a8e3c3b6ddea97bef74d7f43f31654fae	9306	AarnavBaddam/skills	00b8f15a8e3c3b6ddea97bef74d7f43f31654fae	investigation-mode/SKILL.md
+local-github-agentic-loop-pack/skills/investigation-mode/agents/openai.yaml	MATCH_CODE_SEARCH	80569ff5e6ccc8892bf6991ec1eb12f8e9850805	106	AarnavBaddam/skills	80569ff5e6ccc8892bf6991ec1eb12f8e9850805	investigation-mode/agents/openai.yaml
 local-github-agentic-loop-pack/skills/openai-docs/LICENSE.txt	MATCH	13e25df86ce06eb6488e6a6bc5c5847f5dedc352	10776	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/imagegen/LICENSE.txt
-local-github-agentic-loop-pack/skills/openai-docs/SKILL.md	UNMATCHED	55d584128dc81ea3373b7bb761ddfe53c3fac877	22806			
+local-github-agentic-loop-pack/skills/openai-docs/SKILL.md	MATCH_CODE_SEARCH	55d584128dc81ea3373b7bb761ddfe53c3fac877	22806	mistervaibhav/skills	55d584128dc81ea3373b7bb761ddfe53c3fac877	openai-docs/SKILL.md
 local-github-agentic-loop-pack/skills/openai-docs/agents/openai.yaml	MATCH	8bbf03c2065aa2e45b288d572506dceb7f16539a	598	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/agents/openai.yaml
 local-github-agentic-loop-pack/skills/openai-docs/assets/openai-small.svg	MATCH	1d075dc04f617247747ca8e44f8aa9193e0ab3e6	1091	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/assets/openai-small.svg
 local-github-agentic-loop-pack/skills/openai-docs/assets/openai.png	MATCH	e9b9eb80cd90ccdfc7e276b07f4046aa9c9d1887	1429	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/assets/openai.png
-local-github-agentic-loop-pack/skills/openai-docs/references/latest-model.md	UNMATCHED	b3b173d94174f722d09d57e00710143efea5cf22	2365			
-local-github-agentic-loop-pack/skills/openai-docs/references/prompting-guide.md	UNMATCHED	1b27f709d7196e6a52a3faa60e1b75288e4e747d	17483			
+local-github-agentic-loop-pack/skills/openai-docs/references/latest-model.md	MATCH_CODE_SEARCH	b3b173d94174f722d09d57e00710143efea5cf22	2365	PracticalSwan/agent-skills	b3b173d94174f722d09d57e00710143efea5cf22	openai-docs/references/latest-model.md
+local-github-agentic-loop-pack/skills/openai-docs/references/prompting-guide.md	MATCH_CODE_SEARCH	1b27f709d7196e6a52a3faa60e1b75288e4e747d	17483	PracticalSwan/agent-skills	1b27f709d7196e6a52a3faa60e1b75288e4e747d	openai-docs/references/prompting-guide.md
 local-github-agentic-loop-pack/skills/openai-docs/references/upgrade-guide.md	MATCH	8134bc6d5588f4f6dab25e8cd1b88ae51b8f29cd	1050	openai-codex	bbcf5e10fb493f0f46e4155455e1b5c4f69cfe63	codex-rs/skills/src/assets/samples/openai-docs/references/upgrade-guide.md
-local-github-agentic-loop-pack/skills/openai-docs/references/upgrading-to-gpt-5p6-sol.md	UNMATCHED	d173f05b27fe877dd959f6bee573675acca29d3e	23398			
+local-github-agentic-loop-pack/skills/openai-docs/references/upgrading-to-gpt-5p6-sol.md	MATCH_CODE_SEARCH	d173f05b27fe877dd959f6bee573675acca29d3e	23398	PracticalSwan/agent-skills	d173f05b27fe877dd959f6bee573675acca29d3e	openai-docs/references/upgrading-to-gpt-5p6-sol.md
 local-github-agentic-loop-pack/skills/openai-docs/scripts/fetch-codex-manual.mjs	MATCH	b2605520dc54aa3b71769e90887b9fdf06c97da4	16085	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/scripts/fetch-codex-manual.mjs
 local-github-agentic-loop-pack/skills/openai-docs/scripts/resolve-latest-model-info	MATCH	7d00122a37c81a30a7d91d8d74126398975f6493	1038	openai-codex	bbcf5e10fb493f0f46e4155455e1b5c4f69cfe63	codex-rs/skills/src/assets/samples/openai-docs/scripts/resolve-latest-model-info
 local-github-agentic-loop-pack/skills/openai-docs/scripts/resolve-latest-model-info.cjs	MATCH	498e19d256572dc5a6bf5575ed13de834f0a2787	3937	openai-codex	bbcf5e10fb493f0f46e4155455e1b5c4f69cfe63	codex-rs/skills/src/assets/samples/openai-docs/scripts/resolve-latest-model-info.cjs
@@ -558,13 +558,13 @@ local-github-agentic-loop-pack/skills/skill-creator/references/openai_yaml.md	MA
 local-github-agentic-loop-pack/skills/skill-creator/scripts/generate_openai_yaml.py	UNMATCHED	34d784fb3739e878619cbb83cc6e2719e82fc751	6621			
 local-github-agentic-loop-pack/skills/skill-creator/scripts/init_skill.py	MATCH	69673eaa048a24bdf2fa188484e721a43b2bac4c	14602	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/skill-creator/scripts/init_skill.py
 local-github-agentic-loop-pack/skills/skill-creator/scripts/quick_validate.py	UNMATCHED	cb95d129913b1996439c22bd343a15891cd83a38	3337			
-local-github-agentic-loop-pack/skills/verification/SKILL.md	UNMATCHED	ac7132713a7ba2f0b3b5cb16f8f18f6d003abb54	7516			
-local-github-agentic-loop-pack/skills/verification/agents/openai.yaml	UNMATCHED	b6c0dfaa8f014be66bfeb4491a15fef94ffb1bc1	178			
+local-github-agentic-loop-pack/skills/verification/SKILL.md	MATCH_CODE_SEARCH	ac7132713a7ba2f0b3b5cb16f8f18f6d003abb54	7516	AarnavBaddam/skills	ac7132713a7ba2f0b3b5cb16f8f18f6d003abb54	verification/SKILL.md
+local-github-agentic-loop-pack/skills/verification/agents/openai.yaml	MATCH_CODE_SEARCH	b6c0dfaa8f014be66bfeb4491a15fef94ffb1bc1	178	AarnavBaddam/skills	b6c0dfaa8f014be66bfeb4491a15fef94ffb1bc1	verification/agents/openai.yaml
 local-github-agentic-loop-pack/skills/workflow/SKILL.md	UNMATCHED	8afc3f6c3b603cdf0d890bc5aac990bdfcd3e043	27524			
-local-github-agentic-loop-pack/skills/workflow/agents/openai.yaml	UNMATCHED	3ac9db0167334a13bfaec8bfdac434cae97b27ad	106			
+local-github-agentic-loop-pack/skills/workflow/agents/openai.yaml	MATCH_CODE_SEARCH	3ac9db0167334a13bfaec8bfdac434cae97b27ad	106	AarnavBaddam/skills	3ac9db0167334a13bfaec8bfdac434cae97b27ad	workflow/agents/openai.yaml
 local-github-agentic-loop-pack/skills/workflow/references/durable-agent-patterns.md	MATCH	88322a97ef6e1da5b4b1fe77af83753e09c4c270	2522	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/workflow/references/durable-agent-patterns.md
 local-github-agentic-loop-pack/skills/yeet/LICENSE.txt	MATCH	13e25df86ce06eb6488e6a6bc5c5847f5dedc352	10776	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/imagegen/LICENSE.txt
-local-github-agentic-loop-pack/skills/yeet/SKILL.md	UNMATCHED	3d361b2b86dea825edf577faeb6f53e08ff9a186	4011			
+local-github-agentic-loop-pack/skills/yeet/SKILL.md	MATCH_CODE_SEARCH	3d361b2b86dea825edf577faeb6f53e08ff9a186	4011	AarnavBaddam/skills	3d361b2b86dea825edf577faeb6f53e08ff9a186	yeet/SKILL.md
 local-github-agentic-loop-pack/skills/yeet/agents/openai.yaml	MATCH	c85d812608e237cc4c39c104408f9a2e9753a9a2	298	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/yeet/agents/openai.yaml
 local-github-agentic-loop-pack/skills/yeet/assets/yeet-small.svg	MATCH	54bad23ae33fee3d34ffa4a215468529bfd5c7cb	967	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/yeet/assets/yeet-small.svg
 local-github-agentic-loop-pack/skills/yeet/assets/yeet.png	MATCH	277da12916bac20a23f5e59553d3fe67a2117916	1262	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/plugin-provided/github/yeet/assets/yeet.png
