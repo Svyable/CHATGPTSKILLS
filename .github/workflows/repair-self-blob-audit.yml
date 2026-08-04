@@ -1,0 +1,49 @@
+name: Audit repository object store
+
+on:
+  push:
+    branches:
+      - agent/repair-skill-pack-import
+    paths:
+      - '.github/workflows/repair-self-blob-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/repair-skill-pack-import
+          fetch-depth: 0
+      - shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import subprocess
+          rows = [line.split('\t') for line in Path('.repair/file-source-audit.tsv').read_text().splitlines()[1:]]
+          unmatched = [r for r in rows if r[1] == 'UNMATCHED']
+          found=[]
+          for r in unmatched:
+              blob=r[2]
+              p=subprocess.run(['gh','api',f'repos/Svyable/CHATGPTSKILLS/git/blobs/{blob}','--jq','.sha'],text=True,capture_output=True)
+              if p.returncode==0 and p.stdout.strip()==blob:
+                  found.append(r)
+          Path('.repair/self-blob-audit.tsv').write_text('blob\n'+'\n'.join(r[2] for r in found)+'\n')
+          Path('.repair/self-blob-audit-summary.txt').write_text(
+              f'recovered={len(found)}\nrecovered_bytes={sum(int(r[3]) for r in found)}\n'
+              f'remaining_unmatched={len(unmatched)-len(found)}\n'
+              f'remaining_unmatched_bytes={sum(int(r[3]) for r in unmatched if r not in found)}\n')
+          PY
+          rm -f .github/workflows/repair-self-blob-audit.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Audit repository object store [repair-self-blob-audit]'
+          git push origin HEAD:agent/repair-skill-pack-import
