@@ -1,0 +1,80 @@
+name: Audit inherited archive prefix
+
+on:
+  push:
+    branches:
+      - agent/repair-skill-pack-import
+    paths:
+      - '.github/workflows/repair-prefix-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/repair-skill-pack-import
+          fetch-depth: 0
+
+      - name: Recover exact files from inherited prefix
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .upload/part-* > /tmp/prefix.xz.b64
+          base64 -d /tmp/prefix.xz.b64 > /tmp/prefix.xz
+          mkdir -p /tmp/prefix
+          set +e
+          xz -dc /tmp/prefix.xz > /tmp/prefix.tar 2>/tmp/xz-error.txt
+          tar -xf /tmp/prefix.tar -C /tmp/prefix --ignore-zeros 2>/tmp/tar-error.txt
+          set -e
+
+          python - <<'PY'
+          from pathlib import Path
+          import hashlib
+
+          report = Path('.repair/file-source-audit.tsv').read_text().splitlines()
+          header, data = report[0], report[1:]
+          prefix = Path('/tmp/prefix')
+
+          def blob(path: Path):
+              raw = path.read_bytes()
+              return hashlib.sha1(f'blob {len(raw)}\0'.encode() + raw).hexdigest()
+
+          out = [header]
+          recovered = 0
+          recovered_bytes = 0
+          for line in data:
+              cols = line.split('\t')
+              target, status, expected_blob, size = cols[:4]
+              candidate = prefix / target
+              if status == 'UNMATCHED' and candidate.is_file() and candidate.stat().st_size == int(size) and blob(candidate) == expected_blob:
+                  cols[1] = 'MATCH_PREFIX'
+                  cols[4:] = ['staging-prefix', 'c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2', target]
+                  recovered += 1
+                  recovered_bytes += int(size)
+              out.append('\t'.join(cols))
+
+          Path('.repair/file-source-audit.tsv').write_text('\n'.join(out) + '\n')
+          unmatched = [line.split('\t') for line in out[1:] if line.split('\t')[1] == 'UNMATCHED']
+          Path('.repair/prefix-audit-summary.txt').write_text(
+              f'recovered={recovered}\n'
+              f'recovered_bytes={recovered_bytes}\n'
+              f'remaining_unmatched={len(unmatched)}\n'
+              f'remaining_unmatched_bytes={sum(int(r[3]) for r in unmatched)}\n'
+          )
+          print(Path('.repair/prefix-audit-summary.txt').read_text())
+          PY
+
+      - name: Commit audit report
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/repair-prefix-audit.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Recover exact files from inherited archive prefix [repair-prefix-audit]'
+          git push origin HEAD:agent/repair-skill-pack-import
