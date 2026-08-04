@@ -1,0 +1,79 @@
+name: Audit exact blobs through GitHub API
+
+on:
+  push:
+    branches:
+      - agent/repair-skill-pack-import
+    paths:
+      - '.github/workflows/repair-blob-api-audit.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      GH_TOKEN: ${{ github.token }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/repair-skill-pack-import
+          fetch-depth: 0
+
+      - name: Locate exact unmatched blobs
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          from pathlib import Path
+          import json, os, subprocess
+
+          repos = [
+              'lightspeedwp/.github',
+              'vercel/vercel-plugin',
+              'vercel-labs/agent-skills',
+              'openai/skills',
+              'openai/codex',
+              'anthropics/skills',
+              'supabase/agent-skills',
+              'getsentry/sentry-mcp',
+          ]
+          rows = [line.split('\t') for line in Path('.repair/file-source-audit.tsv').read_text().splitlines()[1:]]
+          unmatched = [r for r in rows if r[1] == 'UNMATCHED']
+          found = {}
+          for idx, row in enumerate(unmatched, 1):
+              blob = row[2]
+              for repo in repos:
+                  proc = subprocess.run(
+                      ['gh','api',f'repos/{repo}/git/blobs/{blob}','--jq','.sha'],
+                      text=True, capture_output=True,
+                  )
+                  if proc.returncode == 0 and proc.stdout.strip() == blob:
+                      found[blob] = repo
+                      break
+              print(f'{idx}/{len(unmatched)} found={len(found)}', flush=True)
+
+          out = ['blob\trepository'] + [f'{blob}\t{repo}' for blob, repo in sorted(found.items())]
+          Path('.repair/blob-api-audit.tsv').write_text('\n'.join(out) + '\n')
+          found_rows = [r for r in unmatched if r[2] in found]
+          Path('.repair/blob-api-audit-summary.txt').write_text(
+              f'recovered={len(found_rows)}\n'
+              f'recovered_bytes={sum(int(r[3]) for r in found_rows)}\n'
+              f'remaining_unmatched={len(unmatched)-len(found_rows)}\n'
+              f'remaining_unmatched_bytes={sum(int(r[3]) for r in unmatched if r[2] not in found)}\n'
+          )
+          print(Path('.repair/blob-api-audit-summary.txt').read_text())
+          PY
+
+      - name: Commit audit report
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -f .github/workflows/repair-blob-api-audit.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Locate exact historical blobs through GitHub API [repair-blob-api-audit]'
+          git push origin HEAD:agent/repair-skill-pack-import
