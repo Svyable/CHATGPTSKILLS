@@ -1,63 +1,63 @@
 target	status	blob	size	source	commit	path
-ai-agent-ai-app-skills/ai-elements/SKILL.md	UNMATCHED	6acf20d6e67310a3dc4afc6f273931e1ead5f1f8	21514			
-ai-agent-ai-app-skills/ai-elements/agents/openai.yaml	UNMATCHED	33d8fc74f6d9bed80c2f34417b231064537834f5	171			
-ai-agent-ai-app-skills/ai-gateway/SKILL.md	UNMATCHED	b8cb19d9818ff414252528766541166e0c4d960c	19134			
-ai-agent-ai-app-skills/ai-gateway/agents/openai.yaml	UNMATCHED	c90755b05c429a027b442bd66295e94a98036a79	97			
-ai-agent-ai-app-skills/ai-generation-persistence/SKILL.md	UNMATCHED	a67a336de78ebde08caf06c206d9b609b4314b0a	7749			
-ai-agent-ai-app-skills/ai-generation-persistence/agents/openai.yaml	UNMATCHED	f263ea73b301505d9fead3e408a97cd2d9b5c932	190			
-ai-agent-ai-app-skills/ai-sdk/SKILL.md	UNMATCHED	8bd26672f498a0fdae9b5edd2c87e7c2a89eedc3	6366			
-ai-agent-ai-app-skills/ai-sdk/agents/openai.yaml	UNMATCHED	584a1e2f151dd5f7bf758ec9be0565bf05f45760	89			
+ai-agent-ai-app-skills/ai-elements/SKILL.md	MATCH_PREFIX	6acf20d6e67310a3dc4afc6f273931e1ead5f1f8	21514	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-elements/SKILL.md
+ai-agent-ai-app-skills/ai-elements/agents/openai.yaml	MATCH_PREFIX	33d8fc74f6d9bed80c2f34417b231064537834f5	171	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-elements/agents/openai.yaml
+ai-agent-ai-app-skills/ai-gateway/SKILL.md	MATCH_PREFIX	b8cb19d9818ff414252528766541166e0c4d960c	19134	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-gateway/SKILL.md
+ai-agent-ai-app-skills/ai-gateway/agents/openai.yaml	MATCH_PREFIX	c90755b05c429a027b442bd66295e94a98036a79	97	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-gateway/agents/openai.yaml
+ai-agent-ai-app-skills/ai-generation-persistence/SKILL.md	MATCH_PREFIX	a67a336de78ebde08caf06c206d9b609b4314b0a	7749	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-generation-persistence/SKILL.md
+ai-agent-ai-app-skills/ai-generation-persistence/agents/openai.yaml	MATCH_PREFIX	f263ea73b301505d9fead3e408a97cd2d9b5c932	190	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-generation-persistence/agents/openai.yaml
+ai-agent-ai-app-skills/ai-sdk/SKILL.md	MATCH_PREFIX	8bd26672f498a0fdae9b5edd2c87e7c2a89eedc3	6366	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-sdk/SKILL.md
+ai-agent-ai-app-skills/ai-sdk/agents/openai.yaml	MATCH_PREFIX	584a1e2f151dd5f7bf758ec9be0565bf05f45760	89	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/ai-sdk/agents/openai.yaml
 ai-agent-ai-app-skills/ai-sdk/references/ai-gateway.md	MATCH	8bb2d66ff45d193e8dd4f8144d51c15db8c80dcf	2191	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/ai-gateway.md
 ai-agent-ai-app-skills/ai-sdk/references/common-errors.md	MATCH	529521ebec8f31164bbaf3e1c744c60c8ea3f4c0	11034	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/common-errors.md
 ai-agent-ai-app-skills/ai-sdk/references/devtools.md	MATCH	197e203ad4ffad88743b1a5dda4910fdb5475728	1199	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/devtools.md
 ai-agent-ai-app-skills/ai-sdk/references/providers.md	MATCH	e69de29bb2d1d6434b8b29ae775ad8c2e48c5391	0	anthropic-skills	b29e7cf65e5cb78a5ac33d582270551bc74a14eb	skills/pptx/scripts/__init__.py
 ai-agent-ai-app-skills/ai-sdk/references/type-safe-agents.md	MATCH	17d7a6fdc5edcda9cd39c87f4f80f686c9fea29e	5323	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/ai-sdk/references/type-safe-agents.md
-ai-agent-ai-app-skills/chat-sdk/SKILL.md	UNMATCHED	bc6143ef373014845f6e343f1390b2bb473a354d	11071			
-ai-agent-ai-app-skills/chat-sdk/agents/openai.yaml	UNMATCHED	c93692e380402561447e4d994c39f2c74adabb89	93			
-ai-agent-ai-app-skills/json-render/SKILL.md	UNMATCHED	fc5892bd8312dd62366c67140bfc073fdbb7e7cb	10376			
-ai-agent-ai-app-skills/json-render/agents/openai.yaml	UNMATCHED	be960da11582f2475c0772e2913a433c79deaddd	177			
-ai-agent-ai-app-skills/runtime-cache/SKILL.md	UNMATCHED	afd9263c18c8641fb92bdc9fc25bdc982145f0f6	7962			
-ai-agent-ai-app-skills/runtime-cache/agents/openai.yaml	UNMATCHED	8429fb5ff2125d6736cdc70ddaaae54306571ede	169			
-ai-agent-ai-app-skills/vercel-queues/SKILL.md	UNMATCHED	3866f446cd7c08da7d321e48b0d7e80a33f01b02	8356			
-ai-agent-ai-app-skills/vercel-queues/agents/openai.yaml	UNMATCHED	85a55c07a08ac31dae06dac853d0d49b35e00dd8	179			
-ai-agent-ai-app-skills/vercel-storage/SKILL.md	UNMATCHED	69ffaf510aa9a4a0e1fb03fc35179ceea24da9a0	15334			
-ai-agent-ai-app-skills/vercel-storage/agents/openai.yaml	UNMATCHED	9bae70edceb9527930fd7e102facbe234d2a0348	176			
-ai-agent-ai-app-skills/workflow/SKILL.md	UNMATCHED	8afc3f6c3b603cdf0d890bc5aac990bdfcd3e043	27524			
-ai-agent-ai-app-skills/workflow/agents/openai.yaml	UNMATCHED	3ac9db0167334a13bfaec8bfdac434cae97b27ad	106			
+ai-agent-ai-app-skills/chat-sdk/SKILL.md	MATCH_PREFIX	bc6143ef373014845f6e343f1390b2bb473a354d	11071	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/chat-sdk/SKILL.md
+ai-agent-ai-app-skills/chat-sdk/agents/openai.yaml	MATCH_PREFIX	c93692e380402561447e4d994c39f2c74adabb89	93	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/chat-sdk/agents/openai.yaml
+ai-agent-ai-app-skills/json-render/SKILL.md	MATCH_PREFIX	fc5892bd8312dd62366c67140bfc073fdbb7e7cb	10376	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/json-render/SKILL.md
+ai-agent-ai-app-skills/json-render/agents/openai.yaml	MATCH_PREFIX	be960da11582f2475c0772e2913a433c79deaddd	177	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/json-render/agents/openai.yaml
+ai-agent-ai-app-skills/runtime-cache/SKILL.md	MATCH_PREFIX	afd9263c18c8641fb92bdc9fc25bdc982145f0f6	7962	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/runtime-cache/SKILL.md
+ai-agent-ai-app-skills/runtime-cache/agents/openai.yaml	MATCH_PREFIX	8429fb5ff2125d6736cdc70ddaaae54306571ede	169	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/runtime-cache/agents/openai.yaml
+ai-agent-ai-app-skills/vercel-queues/SKILL.md	MATCH_PREFIX	3866f446cd7c08da7d321e48b0d7e80a33f01b02	8356	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/vercel-queues/SKILL.md
+ai-agent-ai-app-skills/vercel-queues/agents/openai.yaml	MATCH_PREFIX	85a55c07a08ac31dae06dac853d0d49b35e00dd8	179	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/vercel-queues/agents/openai.yaml
+ai-agent-ai-app-skills/vercel-storage/SKILL.md	MATCH_PREFIX	69ffaf510aa9a4a0e1fb03fc35179ceea24da9a0	15334	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/vercel-storage/SKILL.md
+ai-agent-ai-app-skills/vercel-storage/agents/openai.yaml	MATCH_PREFIX	9bae70edceb9527930fd7e102facbe234d2a0348	176	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/vercel-storage/agents/openai.yaml
+ai-agent-ai-app-skills/workflow/SKILL.md	MATCH_PREFIX	8afc3f6c3b603cdf0d890bc5aac990bdfcd3e043	27524	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/workflow/SKILL.md
+ai-agent-ai-app-skills/workflow/agents/openai.yaml	MATCH_PREFIX	3ac9db0167334a13bfaec8bfdac434cae97b27ad	106	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-ai-app-skills/workflow/agents/openai.yaml
 ai-agent-ai-app-skills/workflow/references/durable-agent-patterns.md	MATCH	88322a97ef6e1da5b4b1fe77af83753e09c4c270	2522	vercel-plugin	1e821f3087d6d52b06b918d39d57345e2e4f3cf8	skills/workflow/references/durable-agent-patterns.md
-ai-agent-core-skills/agent-browser/SKILL.md	UNMATCHED	abc80d4c354650e9e87e905efc3060061526cf14	6616			
-ai-agent-core-skills/agent-browser/agents/openai.yaml	UNMATCHED	98c7322268354aa290010f59e9747c448475f102	103			
-ai-agent-core-skills/deployments-cicd/SKILL.md	UNMATCHED	1d4a3782e610f7026a44591a09ab045851515132	11164			
-ai-agent-core-skills/deployments-cicd/agents/openai.yaml	UNMATCHED	9b3cdffa71a7bffe1c68d52b930c715572723497	113			
-ai-agent-core-skills/investigation-mode/SKILL.md	UNMATCHED	00b8f15a8e3c3b6ddea97bef74d7f43f31654fae	9306			
-ai-agent-core-skills/investigation-mode/agents/openai.yaml	UNMATCHED	80569ff5e6ccc8892bf6991ec1eb12f8e9850805	106			
+ai-agent-core-skills/agent-browser/SKILL.md	MATCH_PREFIX	abc80d4c354650e9e87e905efc3060061526cf14	6616	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/agent-browser/SKILL.md
+ai-agent-core-skills/agent-browser/agents/openai.yaml	MATCH_PREFIX	98c7322268354aa290010f59e9747c448475f102	103	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/agent-browser/agents/openai.yaml
+ai-agent-core-skills/deployments-cicd/SKILL.md	MATCH_PREFIX	1d4a3782e610f7026a44591a09ab045851515132	11164	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/deployments-cicd/SKILL.md
+ai-agent-core-skills/deployments-cicd/agents/openai.yaml	MATCH_PREFIX	9b3cdffa71a7bffe1c68d52b930c715572723497	113	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/deployments-cicd/agents/openai.yaml
+ai-agent-core-skills/investigation-mode/SKILL.md	MATCH_PREFIX	00b8f15a8e3c3b6ddea97bef74d7f43f31654fae	9306	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/investigation-mode/SKILL.md
+ai-agent-core-skills/investigation-mode/agents/openai.yaml	MATCH_PREFIX	80569ff5e6ccc8892bf6991ec1eb12f8e9850805	106	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/investigation-mode/agents/openai.yaml
 ai-agent-core-skills/openai-docs/LICENSE.txt	MATCH	13e25df86ce06eb6488e6a6bc5c5847f5dedc352	10776	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/imagegen/LICENSE.txt
-ai-agent-core-skills/openai-docs/SKILL.md	UNMATCHED	55d584128dc81ea3373b7bb761ddfe53c3fac877	22806			
+ai-agent-core-skills/openai-docs/SKILL.md	MATCH_PREFIX	55d584128dc81ea3373b7bb761ddfe53c3fac877	22806	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/openai-docs/SKILL.md
 ai-agent-core-skills/openai-docs/agents/openai.yaml	MATCH	8bbf03c2065aa2e45b288d572506dceb7f16539a	598	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/agents/openai.yaml
 ai-agent-core-skills/openai-docs/assets/openai-small.svg	MATCH	1d075dc04f617247747ca8e44f8aa9193e0ab3e6	1091	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/assets/openai-small.svg
 ai-agent-core-skills/openai-docs/assets/openai.png	MATCH	e9b9eb80cd90ccdfc7e276b07f4046aa9c9d1887	1429	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/assets/openai.png
-ai-agent-core-skills/openai-docs/references/latest-model.md	UNMATCHED	b3b173d94174f722d09d57e00710143efea5cf22	2365			
-ai-agent-core-skills/openai-docs/references/prompting-guide.md	UNMATCHED	1b27f709d7196e6a52a3faa60e1b75288e4e747d	17483			
+ai-agent-core-skills/openai-docs/references/latest-model.md	MATCH_PREFIX	b3b173d94174f722d09d57e00710143efea5cf22	2365	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/openai-docs/references/latest-model.md
+ai-agent-core-skills/openai-docs/references/prompting-guide.md	MATCH_PREFIX	1b27f709d7196e6a52a3faa60e1b75288e4e747d	17483	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/openai-docs/references/prompting-guide.md
 ai-agent-core-skills/openai-docs/references/upgrade-guide.md	MATCH	8134bc6d5588f4f6dab25e8cd1b88ae51b8f29cd	1050	openai-codex	bbcf5e10fb493f0f46e4155455e1b5c4f69cfe63	codex-rs/skills/src/assets/samples/openai-docs/references/upgrade-guide.md
-ai-agent-core-skills/openai-docs/references/upgrading-to-gpt-5p6-sol.md	UNMATCHED	d173f05b27fe877dd959f6bee573675acca29d3e	23398			
+ai-agent-core-skills/openai-docs/references/upgrading-to-gpt-5p6-sol.md	MATCH_PREFIX	d173f05b27fe877dd959f6bee573675acca29d3e	23398	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/openai-docs/references/upgrading-to-gpt-5p6-sol.md
 ai-agent-core-skills/openai-docs/scripts/fetch-codex-manual.mjs	MATCH	b2605520dc54aa3b71769e90887b9fdf06c97da4	16085	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/openai-docs/scripts/fetch-codex-manual.mjs
 ai-agent-core-skills/openai-docs/scripts/resolve-latest-model-info	MATCH	7d00122a37c81a30a7d91d8d74126398975f6493	1038	openai-codex	bbcf5e10fb493f0f46e4155455e1b5c4f69cfe63	codex-rs/skills/src/assets/samples/openai-docs/scripts/resolve-latest-model-info
 ai-agent-core-skills/openai-docs/scripts/resolve-latest-model-info.cjs	MATCH	498e19d256572dc5a6bf5575ed13de834f0a2787	3937	openai-codex	bbcf5e10fb493f0f46e4155455e1b5c4f69cfe63	codex-rs/skills/src/assets/samples/openai-docs/scripts/resolve-latest-model-info.cjs
 ai-agent-core-skills/skill-creator/LICENSE.txt	MATCH	d645695673349e3947e8e5ae42332d0ac3164cd7	11358	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/skill-creator/license.txt
-ai-agent-core-skills/skill-creator/SKILL.md	UNMATCHED	134de55d48cc28a460d0cc214cd9a934a71e4339	32400			
-ai-agent-core-skills/skill-creator/agents/openai.yaml	UNMATCHED	e8e56c156fe8a8a8816e747b0b5df2ef477ec9a8	159			
+ai-agent-core-skills/skill-creator/SKILL.md	MATCH_PREFIX	134de55d48cc28a460d0cc214cd9a934a71e4339	32400	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/skill-creator/SKILL.md
+ai-agent-core-skills/skill-creator/agents/openai.yaml	MATCH_PREFIX	e8e56c156fe8a8a8816e747b0b5df2ef477ec9a8	159	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/skill-creator/agents/openai.yaml
 ai-agent-core-skills/skill-creator/references/openai_yaml.md	MATCH	90f9e8e863dff501c0125e2ead20c1dd6c3028d5	2356	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/playwright-testing-agent/skills/local/platform-managed/.system/skill-creator/references/openai_yaml.md
-ai-agent-core-skills/skill-creator/scripts/generate_openai_yaml.py	UNMATCHED	34d784fb3739e878619cbb83cc6e2719e82fc751	6621			
+ai-agent-core-skills/skill-creator/scripts/generate_openai_yaml.py	MATCH_PREFIX	34d784fb3739e878619cbb83cc6e2719e82fc751	6621	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/skill-creator/scripts/generate_openai_yaml.py
 ai-agent-core-skills/skill-creator/scripts/init_skill.py	MATCH	69673eaa048a24bdf2fa188484e721a43b2bac4c	14602	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/platform-managed/system/skill-creator/scripts/init_skill.py
-ai-agent-core-skills/skill-creator/scripts/quick_validate.py	UNMATCHED	cb95d129913b1996439c22bd343a15891cd83a38	3337			
-ai-agent-core-skills/verification/SKILL.md	UNMATCHED	ac7132713a7ba2f0b3b5cb16f8f18f6d003abb54	7516			
-ai-agent-core-skills/verification/agents/openai.yaml	UNMATCHED	b6c0dfaa8f014be66bfeb4491a15fef94ffb1bc1	178			
-ai-agent-documents-creative-skills/answers-charts/SKILL.md	UNMATCHED	0e2354631502c1ee6bc01daaec179a0df65d18db	11628			
+ai-agent-core-skills/skill-creator/scripts/quick_validate.py	MATCH_PREFIX	cb95d129913b1996439c22bd343a15891cd83a38	3337	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/skill-creator/scripts/quick_validate.py
+ai-agent-core-skills/verification/SKILL.md	MATCH_PREFIX	ac7132713a7ba2f0b3b5cb16f8f18f6d003abb54	7516	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/verification/SKILL.md
+ai-agent-core-skills/verification/agents/openai.yaml	MATCH_PREFIX	b6c0dfaa8f014be66bfeb4491a15fef94ffb1bc1	178	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-core-skills/verification/agents/openai.yaml
+ai-agent-documents-creative-skills/answers-charts/SKILL.md	MATCH_PREFIX	0e2354631502c1ee6bc01daaec179a0df65d18db	11628	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-documents-creative-skills/answers-charts/SKILL.md
 ai-agent-documents-creative-skills/documents/LICENSE.txt	MATCH	5e10c58641c8bf1d12b73bea31c9dcf3abbe6c31	1418	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/LICENSE.txt
-ai-agent-documents-creative-skills/documents/SKILL.md	UNMATCHED	85ff51367ad2d9ce9a369e070f684c4435a253ba	37432			
+ai-agent-documents-creative-skills/documents/SKILL.md	MATCH_PREFIX	85ff51367ad2d9ce9a369e070f684c4435a253ba	37432	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-documents-creative-skills/documents/SKILL.md
 ai-agent-documents-creative-skills/documents/agents/openai.yaml	MATCH	60a5ec1c5b2c742030e202186627b471adaa871b	314	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/agents/openai.yaml
 ai-agent-documents-creative-skills/documents/assets/file-document.png	MATCH	64b65e5d955cc4ed5e0a53529ee1cd6097bee683	10876	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/assets/file-document.png
-ai-agent-documents-creative-skills/documents/examples/end_to_end_smoke_test.md	UNMATCHED	54b60b328c1b98c530da7f0eb7da3df7b9277b20	930			
+ai-agent-documents-creative-skills/documents/examples/end_to_end_smoke_test.md	MATCH_PREFIX	54b60b328c1b98c530da7f0eb7da3df7b9277b20	930	staging-prefix	c128b40905bac73700130a84358de5abf784e46d35ecbb81195eb523cc8899c2	ai-agent-documents-creative-skills/documents/examples/end_to_end_smoke_test.md
 ai-agent-documents-creative-skills/documents/manifest.txt	MATCH	dc8f5628d9527da95262644fb3fb9b2764c96f35	1999	lightspeed	a14b5adb1db5c88a3dbd863034035ad88332c522	agents/ai-readiness-estimator-agent/skills/directory-installed/builtins/documents/manifest.txt
 ai-agent-documents-creative-skills/documents/ooxml/comments.md	UNMATCHED	997d0f1e7725157355cf97f93c09d3b5f688cf3f	1879			
 ai-agent-documents-creative-skills/documents/ooxml/hyperlinks_and_fields.md	UNMATCHED	c3d32c20902eaeb08a8b75ccc4288203ee277efd	2505			
